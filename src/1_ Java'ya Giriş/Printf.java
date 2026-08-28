@@ -7,6 +7,7 @@ public class Printf {
         System.out.printf("Ad: %s, Yaş: %d, Not: %.2f%n", isim, yas, not);
     }
 }
+
 /*
 println — Yazdırdıktan sonra, alt satıra geçer
 print — Yazdırdıktan sonra, alt satıra geçmez
