@@ -1,5 +1,5 @@
 // args argümanı programa dışarıdan değer göndermeni sağlar.
-
+/*
 public class UygArgs {
     public static void main(String[] args) {
         if (args.length > 0) {
@@ -10,22 +10,22 @@ public class UygArgs {
     }
 }
 
-/*
-        $ javac UygArgs.java
 
-        $ java UygArgs Ali
-        # Çıktı: Merhaba, Ali!
+$ javac UygArgs.java
 
-        $ java UygArgs
-        # Çıktı: Merhaba, yabancı!
+$ java UygArgs Ali
+# Çıktı: Merhaba, Ali!
 
-        args[0] ilk argümanı,
-        args[1] ikinci argümanı verir.
-        args.length toplam argüman sayısını döndürür.
-    */
+$ java UygArgs
+# Çıktı: Merhaba, yabancı!
+
+args[0] ilk argümanı,
+args[1] ikinci argümanı verir.
+args.length toplam argüman sayısını döndürür.
+*/
 
 // Birden fazla argüman gönderme.
-/*
+
 public class UygArgs {
     public static void main(String[] args) {
         System.out.println("Toplam argüman: " + args.length);
@@ -34,13 +34,13 @@ public class UygArgs {
         }
     }
 }
-*/
+
 /*
-        $ javac UygArgs.java
-        $ java UygArgs Java çok güzel
-        # Çıktı:
-        # Toplam argüman: 3
-        # args[0] = Java
-        # args[1] = çok
-        # args[2] = güzel
+$ javac UygArgs.java
+$ java UygArgs Java çok güzel
+# Çıktı:
+# Toplam argüman: 3
+# args[0] = Java
+# args[1] = çok
+# args[2] = güzel
 */
