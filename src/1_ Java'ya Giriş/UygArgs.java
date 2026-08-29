@@ -10,7 +10,6 @@ public class UygArgs {
     }
 }
 
-
 $ javac UygArgs.java
 
 $ java UygArgs Ali
@@ -24,8 +23,8 @@ args[1] ikinci argümanı verir.
 args.length toplam argüman sayısını döndürür.
 */
 
-// Birden fazla argüman gönderme.
 
+// Birden fazla argüman gönderme.
 public class UygArgs {
     public static void main(String[] args) {
         System.out.println("Toplam argüman: " + args.length);
