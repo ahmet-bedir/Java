@@ -6,3 +6,6 @@ public class Giris {
         System.out.println(dil + " programlama dili " + yas + " yaşında!");
     }
 }
+/*
+Dikkat: Dosya adı, public sınıf adıyla birebir aynı olmalı. Bu sınıf HelloWorld ise dosya HelloWorld.java olmak zorunda. helloworld.java veya Hello_World.java olmaz. Java büyük-küçük harf duyarlıdır (case-sensitive).
+*/
