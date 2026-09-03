@@ -14,5 +14,6 @@ public class OperatorOnceligi {
     }
 }
 /*
-
- */
+💡 İpucu: Emin olmadığın yerde parantez kullan. Hem kodu daha okunabilir yapar hem de beklenmedik sonuçları önler.
+a + b * c yerine a + (b * c) yazmak açıklığı artırır.
+*/
