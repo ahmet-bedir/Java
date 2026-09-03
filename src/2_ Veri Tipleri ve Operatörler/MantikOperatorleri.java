@@ -15,3 +15,8 @@ public class MantikOperatorleri {
         System.out.println("İndirim var mı? " + indirimVar);  // true
     }
 }
+/*
+&& (VE): İki taraf da true ise true.
+|| (VEYA): En az bir taraf true ise true.
+! (DEĞİL): true'yu false, false'u true yapar.
+*/
