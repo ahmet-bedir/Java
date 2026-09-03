@@ -8,13 +8,11 @@ public class AritmetikOperatorler {
         System.out.println("a * b = " + (a * b));   // 85 (çarpma)
         System.out.println("a / b = " + (a / b));   // 3  (bölme — tam sayı!)
         System.out.println("a % b = " + (a % b));   // 2  (mod — kalan)
-
-        
-        System.out.println(17.0 / 5);   // 3.4
-        System.out.println((double) 17 / 5); // 3.4 (casting ile
     }
 }
 /*
 ⚠️ Dikkat: İki int bölünürse sonuç da int olur. 17 / 5 = 3, not 3.4! Ondalıklı sonuç istiyorsan en az bir taraf double olmalı:
 
+System.out.println(17.0 / 5);   // 3.4
+System.out.println((double) 17 / 5); // 3.4 (casting ile)
 */
