@@ -55,34 +55,34 @@ String: Metin Tipi
 
 String bir primitive tip değildir — bir sınıftır (class). Ama o kadar sık kullanılır ki, primitive tipler gibi kolayca oluşturulabilir:
 
-        // String oluşturma yolları
-        String isim = "Ali";              // Literal (en yaygın)
-        String soyisim = new String("Yılmaz"); // Constructor ile (gereksiz, kullanma)
+// String oluşturma yolları
+String isim = "Ali"  // Literal (en yaygın)
+String soyisim = new String("Yılmaz");  // Constructor ile (gereksiz, kullanma)
 
-        // String birleştirme
-        String tamIsim = isim + " " + soyisim;
+// String birleştirme
+String tamIsim = isim + " " + soyisim;
         System.out.println(tamIsim);  // Ali Yılmaz
 
-        // String uzunluğu
-        System.out.println("Uzunluk: " + tamIsim.length());  // 10
+// String uzunluğu
+System.out.println("Uzunluk: " + tamIsim.length());  // 10
 
-        // Büyük-küçük harf
+// Büyük-küçük harf
         System.out.println(tamIsim.toUpperCase());  // ALI YILMAZ
         System.out.println(tamIsim.toLowerCase());  // ali yılmaz
 
-        // Belirli karakteri alma (index 0'dan başlar)
-        System.out.println("İlk harf: " + tamIsim.charAt(0));  // A
+// Belirli karakteri alma (index 0'dan başlar)
+System.out.println("İlk harf: " + tamIsim.charAt(0));  // A
  
 ---
 Var Anahtar Kelimesi (Java 10+)
 Java 10'dan itibaren lokal değişkenlerde var kullanabilirsin. Java tipi otomatik anlar:
 
 var isim = "Ali";       // Java anlar: bu String
-        var yas = 25;           // Java anlar: bu int
-        var boy = 1.75;         // Java anlar: bu double
-        var aktif = true;       // Java anlar: bu boolean
+var yas = 25;           // Java anlar: bu int
+var boy = 1.75;         // Java anlar: bu double
+var aktif = true;       // Java anlar: bu boolean
 
- var x;          // HATA! Başlangıç değeri olmadan var kullanamassın
+var x;          // HATA! Başlangıç değeri olmadan var kullanamassın
 var y = null;   // HATA! null'dan tip çıkarılamaz
 
 ---
