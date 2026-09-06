@@ -14,15 +14,28 @@ public class Degiskenler {
     }
 }
 /*
+Değişkeni önce tanımlayıp sonra da değer atayabilirsin:
+
+```java
+int sayi;        // Tanımlama (declaration)
+sayi = 42;       // Değer atama (assignment)
+
+// Veya tek satırda:
+int sayi = 42;   // Tanımlama + ilk değer atama (initialization)
+```
+
+⚠️ Dikkat: Değer atamadan bir lokal değişkeni kullanmaya çalışırsan Java hata verir.
+
+---
 Primitive (İlkel) Veri Tipleri
 Java'da 8 tane primitive veri tipi var.
 
 ---
 Tam Sayı Tipleri
-Tip	  Boyut	    Aralık	                        Kullanım
-byte	1 byte	-128 ile 127                   	Çok küçük sayılar, dosya verisi
+Tip	  Boyut	   Aralık	                         Kullanım
+byte	1 byte	-128 ile 127                   	 Çok küçük sayılar, dosya verisi
 short	2 byte	-32,768 ile 32,767	             Nadiren kullanılır
-int	4 byte	≈ -2.1 milyar ile ≈ 2.1 milyar	   En çok kullanılan tam sayı tipi
+int	  4 byte  -2.1 milyar ile ≈ 2.1 milyar	   En çok kullanılan tam sayı tipi
 long	8 byte	≈ -9.2 × 10¹⁸ ile ≈ 9.2 × 10¹⁸   Çok büyük sayılar
 
 byte kucukSayi = 100;
@@ -32,11 +45,11 @@ long buyukSayi = 9_000_000_000L;   // L soneki zorunlu!
 
 ---
 Ondalıklı Sayı Tipleri
-Tip	     Boyut	  Hassasiyet	 Kullanım
-float	  4 byte	~7 basamak	  Düşük hassasiyet yeterliyse
-double	8 byte	~15 basamak	  Varsayılan ondalıklı tip
+Tip	     Boyut	  Hassasiyet	  Kullanım
+float	   4 byte	  ~7 basamak	  Düşük hassasiyet yeterliyse
+double	 8 byte	  ~15 basamak	  Varsayılan ondalıklı tip
 
-float pi_float = 3.14159f;      // f soneki zorunlu!
+float pi_float = 3.14159f;             // f soneki zorunlu!
 double pi_double = 3.141592653589793;  // Varsayılan, sonek gerek yok
 
 float kullanırken sonuna f eklemelisin. Eklemezsen Java onu double sayar ve float değişkenine double atayamazsın (daraltıcı dönüşüm hatası).
@@ -50,6 +63,9 @@ char harf = 'J';
 char rakam = '7';       // Bu bir sayı değil, karakter!
 char unicode = '\u0041'; // Unicode ile 'A'
 
+- `boolean`: Sadece true veya false alır. Koşul kontrollerinde kullanılır.
+- `char`: Tek bir karakter saklar. Tek tırnak ile yazılır: 'A'. Çift tırnak String için kullanılır: "A"
+
 ---
 String: Metin Tipi
 
@@ -61,14 +77,14 @@ String soyisim = new String("Yılmaz");  // Constructor ile (gereksiz, kullanma)
 
 // String birleştirme
 String tamIsim = isim + " " + soyisim;
-        System.out.println(tamIsim);  // Ali Yılmaz
+System.out.println(tamIsim);  // Ali Yılmaz
 
 // String uzunluğu
 System.out.println("Uzunluk: " + tamIsim.length());  // 10
 
 // Büyük-küçük harf
-        System.out.println(tamIsim.toUpperCase());  // ALI YILMAZ
-        System.out.println(tamIsim.toLowerCase());  // ali yılmaz
+System.out.println(tamIsim.toUpperCase());  // ALI YILMAZ
+System.out.println(tamIsim.toLowerCase());  // ali yılmaz
 
 // Belirli karakteri alma (index 0'dan başlar)
 System.out.println("İlk harf: " + tamIsim.charAt(0));  // A
@@ -82,14 +98,20 @@ var yas = 25;           // Java anlar: bu int
 var boy = 1.75;         // Java anlar: bu double
 var aktif = true;       // Java anlar: bu boolean
 
+// var kullanınca Java, sağ taraftaki değere bakarak tipi kendisi belirler.
+
 var x;          // HATA! Başlangıç değeri olmadan var kullanamassın
 var y = null;   // HATA! null'dan tip çıkarılamaz
 
+// var dinamik tipleme değildir. Java hâlâ statik tipli. Sadece sen tipi yazmıyorsun, derleyici çıkarıyor. Tip belirlendikten sonra değiştirilemez.
+
 ---
 İsimlendirme Kuralları ve Gelenekleri
-Java'da isimlendirme hem kurallar (rules — ihlal edersen derleme hatası) hem gelenekler (conventions — ihlal edersen kötü karşılanır) içerir.
+
+Java'da isimlendirme hem kurallar (rules — ihlal edersen derleme hatası), hem gelenekler (conventions — ihlal edersen kötü karşılanır) içerir.
 
 Zorunlu Kurallar
+
 - İsim harf, _ veya $ ile başlamalı (rakamla başlayamaz)
 
 - İsimde boşluk olamaz
@@ -115,7 +137,7 @@ Bu geleneklere uymak zorunda değilsin ama uymazsan diğer Java geliştiricileri
 
 Öğe	Gelenek	Örnek
 Değişken	camelCase	ogrenciYasi, toplamTutar
-Metot	camelCase
+Metot	    camelCase
 
 
 */
