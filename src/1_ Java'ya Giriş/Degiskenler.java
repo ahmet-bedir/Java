@@ -19,22 +19,22 @@ Java'da 8 tane primitive veri tipi var.
 
 ---
 Tam Sayı Tipleri
-Tip	Boyut	Aralık	Kullanım
-byte	1 byte	-128 ile 127	Çok küçük sayılar, dosya verisi
-short	2 byte	-32,768 ile 32,767	Nadiren kullanılır
-int	4 byte	≈ -2.1 milyar ile ≈ 2.1 milyar	En çok kullanılan tam sayı tipi
+Tip	  Boyut	    Aralık	                        Kullanım
+byte	1 byte	-128 ile 127                   	Çok küçük sayılar, dosya verisi
+short	2 byte	-32,768 ile 32,767	             Nadiren kullanılır
+int	4 byte	≈ -2.1 milyar ile ≈ 2.1 milyar	   En çok kullanılan tam sayı tipi
 long	8 byte	≈ -9.2 × 10¹⁸ ile ≈ 9.2 × 10¹⁸   Çok büyük sayılar
 
 byte kucukSayi = 100;
 short ortaSayi = 30000;
 int normalSayi = 2_000_000_000;    // Sayıların içinde _ (alt çizgi) kullanarak okunabilirliği artırabilirsin.
 long buyukSayi = 9_000_000_000L;   // L soneki zorunlu!
-        
+
 ---
 Ondalıklı Sayı Tipleri
-Tip	Boyut	Hassasiyet	Kullanım
-float	4 byte	~7 basamak	Düşük hassasiyet yeterliyse
-double	8 byte	~15 basamak	Varsayılan ondalıklı tip
+Tip	     Boyut	  Hassasiyet	 Kullanım
+float	  4 byte	~7 basamak	  Düşük hassasiyet yeterliyse
+double	8 byte	~15 basamak	  Varsayılan ondalıklı tip
 
 float pi_float = 3.14159f;      // f soneki zorunlu!
 double pi_double = 3.141592653589793;  // Varsayılan, sonek gerek yok
@@ -72,7 +72,7 @@ System.out.println("Uzunluk: " + tamIsim.length());  // 10
 
 // Belirli karakteri alma (index 0'dan başlar)
 System.out.println("İlk harf: " + tamIsim.charAt(0));  // A
- 
+
 ---
 Var Anahtar Kelimesi (Java 10+)
 Java 10'dan itibaren lokal değişkenlerde var kullanabilirsin. Java tipi otomatik anlar:
