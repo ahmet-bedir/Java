@@ -142,5 +142,38 @@ Sınıf	            PascalCase	           OgrenciBilgisi, HesapMakinesi
 Sabit (constant)	SCREAMING_SNAKE_CASE	 MAX_BOYUT, PI_DEGERI
 Paket	            küçük harf	           com.example.proje
 
+```java
+public class IsimlendirmeOrnekleri {
+    // Sabit — BÜYÜK HARF + alt çizgi
+    static final double PI_DEGERI = 3.14159;
+    static final int MAX_OGRENCI_SAYISI = 50;
 
+    public static void main(String[] args) {
+        // Değişken — camelCase
+        String ogrenciAdi = "Ali";
+        int toplamPuan = 85;
+        boolean sinifiGectiMi = toplamPuan >= 50;
+
+        System.out.println(ogrenciAdi + ": " + toplamPuan + " puan");
+        System.out.println("Geçti mi? " + sinifiGectiMi);
+    }
+}
+```
+
+---
+Java'nın Anahtar Kelimeleri
+Java'da 50+ anahtar kelime (reserved word) var. Bunlar değişken, metot veya sınıf adı olarak kullanılamaz:
+
+```text
+abstract  assert    boolean   break     byte
+case      catch     char      class     const
+continue  default   do        double    else
+enum      extends   final     finally   float
+for       goto      if        implements import
+instanceof int      interface long      native
+new       package   private   protected public
+return    short     static    strictfp  super
+switch    synchronized this   throw     throws
+transient try       void      volatile  while
+```
 */
