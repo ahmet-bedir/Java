@@ -135,9 +135,12 @@ int class = 10;       // Anahtar kelime kullanılamaz
 Gelenekler (Convention)
 Bu geleneklere uymak zorunda değilsin ama uymazsan diğer Java geliştiricileri kodunu okuduğunda kaşlarını çatacak.
 
-Öğe	Gelenek	Örnek
-Değişken	camelCase	ogrenciYasi, toplamTutar
-Metot	    camelCase
+Öğe	              Gelenek	               Örnek
+Değişken	        camelCase	             ogrenciYasi, toplamTutar
+Metot	            camelCase	             hesaplaOrtalama(), kullaniciGetir()
+Sınıf	            PascalCase	           OgrenciBilgisi, HesapMakinesi
+Sabit (constant)	SCREAMING_SNAKE_CASE	 MAX_BOYUT, PI_DEGERI
+Paket	            küçük harf	           com.example.proje
 
 
 */
