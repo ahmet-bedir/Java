@@ -12,6 +12,8 @@ public class KarsilastirmaOperatorleri {
     }
 }
 /*
+Sonuç her zaman boolean (true veya false) olur.
+
 ⚠️ Dikkat: Eşitlik kontrolü == (iki eşittir). Tek = atama operatörüdür.
 
 if (x = 5) { ... }   // HATA! Bu atama, karşılaştırma değil.

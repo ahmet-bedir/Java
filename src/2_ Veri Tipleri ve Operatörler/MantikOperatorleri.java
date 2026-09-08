@@ -7,7 +7,7 @@ public class MantikOperatorleri {
         System.out.println("a || b: " + (a || b));   // true  (VEYA)
         System.out.println("!a: " + (!a));           // false (DEĞİL)
 
-        //  örnek
+        // örnek
         int yas = 20;
         boolean ogrenci = true;
 
