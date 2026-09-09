@@ -1,4 +1,4 @@
-public class BasitHesap {
+public class Hesap {
     public static void main(String[] args) {
         int a = 15;
         int b = 7;
