@@ -1,4 +1,4 @@
-public class TextBlockOrnegi {
+public class TextBlock {
     public static void main(String[] args) {
         // Eski yöntem — escape karakterleriyle
         String eskiYontem = "{\n" +

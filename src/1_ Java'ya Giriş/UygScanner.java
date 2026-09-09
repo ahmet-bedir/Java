@@ -1,6 +1,6 @@
 import java.util.Scanner;  // Scanner'ı import et
 
-public class Scanner {
+public class UygScanner {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);  // Klavyeyi dinlemeye başla
 
