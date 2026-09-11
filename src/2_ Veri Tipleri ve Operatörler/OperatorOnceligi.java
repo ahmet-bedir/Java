@@ -14,15 +14,15 @@ public class OperatorOnceligi {
     }
 }
 /*
-Öncelik	Operatör	Açıklama
-1 (En yüksek)	()	Parantez
-2	++, --, !	Tekli operatörler
-3	*, /, %	Çarpma, bölme, mod
-4	+, -	Toplama, çıkarma
-5	<, >, <=, >=	Karşılaştırma
-6	==, !=	Eşitlik
-7	&&	Mantıksal VE
-8	`		`	Mantıksal VEYA
+Öncelik	        Operatör	    Açıklama
+1 (En yüksek)	()	            Parantez
+2	            ++, --, !	    Tekli operatörler
+3	            *, /, %	        Çarpma, bölme, mod
+4	            +, -	        Toplama, çıkarma
+5	            <, >, <=, >=	Karşılaştırma
+6	            ==, !=	        Eşitlik
+7	            &&	            Mantıksal VE
+8	            ||  	        Mantıksal VEYA
 9 (En düşük)	=, +=, -= ...	Atama
 
 💡 İpucu: Emin olmadığın yerde parantez kullan. Hem kodu daha okunabilir yapar hem de beklenmedik sonuçları önler.
