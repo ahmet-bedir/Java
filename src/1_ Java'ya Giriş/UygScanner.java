@@ -13,13 +13,29 @@ public class UygScanner {
     }
 }
 /*
-`import java.util.Scanner;` → Scanner sınıfını programa dahil ettik. Bu satır olmadan Scanner kullanamazsın.
+- `import java.util.Scanner;` → Scanner sınıfını programa dahil ettik. Bu satır olmadan Scanner kullanamazsın.
 
-`Scanner scanner = new Scanner(System.in);` → Yeni bir Scanner nesnesi oluşturdum. System.in = klavye girdisi.
+- `Scanner scanner = new Scanner(System.in);` → Yeni bir Scanner nesnesi oluşturdum. System.in = klavye girdisi.
 
-`System.out.print("Adın ne? ");` → println değil print kullandık — böylece kullanıcı aynı satırda yazar.
+- `System.out.print("Adın ne? ");` → println değil print kullandık — böylece kullanıcı aynı satırda yazar.
 
-`scanner.nextLine();` → Kullanıcı bir satır yazıp Enter'a basana kadar bekler, sonra yazdığını String olarak döndürür.
+- `scanner.nextLine();` → Kullanıcı bir satır yazıp Enter'a basana kadar bekler, sonra yazdığını String olarak döndürür.
 
-`scanner.close();` → Scanner'ı kapattık. Kaynak sızıntısını önler.
-/
+- `scanner.close();` → Scanner'ı kapattık. Kaynak sızıntısını önler.
+
+---
+Scanner Metodları
+Scanner farklı veri tipleri için farklı metodlar sunar:
+
+Metod	        Ne Okur	    Dönüş Tipi	Örnek Girdi
+nextLine()	    Satırın tamamını	String	Merhaba Dünya
+next()	        Sonraki kelimeyi	String	Merhaba
+nextInt()	    Tam sayı	int	42
+nextDouble()	Ondalıklı sayı	double	3.14
+nextLong()	    Büyük tam sayı	long	9000000000
+nextFloat()     Ondalıklı sayı	float	3.14
+nextBoolean()	Boolean	boolean	true
+hasNextInt()	Sıradaki int mi?	boolean	—
+hasNextLine()	Başka satır var mı?	boolean	—
+
+*/

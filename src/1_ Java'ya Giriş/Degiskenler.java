@@ -31,12 +31,12 @@ Primitive (İlkel) Veri Tipleri
 Java'da 8 tane primitive veri tipi var.
 
 ---
-Tam Sayı Tipleri
-Tip	  Boyut	   Aralık	                         Kullanım
-byte	1 byte	-128 ile 127                   	 Çok küçük sayılar, dosya verisi
-short	2 byte	-32,768 ile 32,767	             Nadiren kullanılır
-int	  4 byte  -2.1 milyar ile ≈ 2.1 milyar	   En çok kullanılan tam sayı tipi
-long	8 byte	≈ -9.2 × 10¹⁸ ile ≈ 9.2 × 10¹⁸   Çok büyük sayılar
+Tam     Sayı Tipleri
+Tip	    Boyut	    Aralık	                            Kullanım
+byte	1 byte	    -128 ile 127                   	    Çok küçük sayılar, dosya verisi
+short	2 byte	    -32,768 ile 32,767	                Nadiren kullanılır
+int	    4 byte      -2.1 milyar ile ≈ 2.1 milyar	    En çok kullanılan tam sayı tipi
+long	8 byte	    ≈ -9.2 × 10¹⁸ ile ≈ 9.2 × 10¹⁸      Çok büyük sayılar
 
 byte kucukSayi = 100;
 short ortaSayi = 30000;
@@ -46,7 +46,7 @@ long buyukSayi = 9_000_000_000L;   // L soneki zorunlu!
 ---
 Ondalıklı Sayı Tipleri
 Tip	     Boyut	  Hassasiyet	  Kullanım
-float	   4 byte	  ~7 basamak	  Düşük hassasiyet yeterliyse
+float	 4 byte	  ~7 basamak	  Düşük hassasiyet yeterliyse
 double	 8 byte	  ~15 basamak	  Varsayılan ondalıklı tip
 
 float pi_float = 3.14159f;             // f soneki zorunlu!
@@ -135,11 +135,11 @@ int class = 10;       // Anahtar kelime kullanılamaz
 Gelenekler (Convention)
 Bu geleneklere uymak zorunda değilsin ama uymazsan diğer Java geliştiricileri kodunu okuduğunda kaşlarını çatacak.
 
-Öğe	              Gelenek	               Örnek
-Değişken	        camelCase	             ogrenciYasi, toplamTutar
-Metot	            camelCase	             hesaplaOrtalama(), kullaniciGetir()
+Öğe	                Gelenek	               Örnek
+Değişken	        camelCase	           ogrenciYasi, toplamTutar
+Metot	            camelCase	           hesaplaOrtalama(), kullaniciGetir()
 Sınıf	            PascalCase	           OgrenciBilgisi, HesapMakinesi
-Sabit (constant)	SCREAMING_SNAKE_CASE	 MAX_BOYUT, PI_DEGERI
+Sabit (constant)	SCREAMING_SNAKE_CASE   MAX_BOYUT, PI_DEGERI
 Paket	            küçük harf	           com.example.proje
 
 ```java
@@ -165,15 +165,15 @@ Java'nın Anahtar Kelimeleri
 Java'da 50+ anahtar kelime (reserved word) var. Bunlar değişken, metot veya sınıf adı olarak kullanılamaz:
 
 ```text
-abstract  assert    boolean   break     byte
-case      catch     char      class     const
-continue  default   do        double    else
-enum      extends   final     finally   float
-for       goto      if        implements import
-instanceof int      interface long      native
-new       package   private   protected public
-return    short     static    strictfp  super
-switch    synchronized this   throw     throws
-transient try       void      volatile  while
+abstract    assert        boolean       break       byte
+case        catch         char          class       const
+continue    default       do            double      else
+enum        extends       final         finally     float
+for         goto          if            implements  import
+instanceof  int           interface     long        native
+new         package       private       protected   public
+return      short         static        strictfp    super
+switch      synchronized  this          throw       throws
+transient   try           void          volatile    while
 ```
 */
