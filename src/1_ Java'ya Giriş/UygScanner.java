@@ -27,15 +27,15 @@ public class UygScanner {
 Scanner Metodları
 Scanner farklı veri tipleri için farklı metodlar sunar:
 
-Metod	        Ne Okur	    Dönüş Tipi	Örnek Girdi
-nextLine()	    Satırın tamamını	String	Merhaba Dünya
-next()	        Sonraki kelimeyi	String	Merhaba
-nextInt()	    Tam sayı	int	42
-nextDouble()	Ondalıklı sayı	double	3.14
-nextLong()	    Büyük tam sayı	long	9000000000
-nextFloat()     Ondalıklı sayı	float	3.14
-nextBoolean()	Boolean	boolean	true
-hasNextInt()	Sıradaki int mi?	boolean	—
-hasNextLine()	Başka satır var mı?	boolean	—
+Metod	        Ne Okur	            Dönüş Tipi	Örnek Girdi
+nextLine()	    Satırın tamamını	String	    Merhaba Dünya
+next()	        Sonraki kelimeyi	String	    Merhaba
+nextInt()	    Tam sayı	        int	        42
+nextDouble()	Ondalıklı sayı	    double	    3.14
+nextLong()	    Büyük tam sayı	    long	    9000000000
+nextFloat()     Ondalıklı sayı	    float	    3.14
+nextBoolean()	Boolean	boolean	    true
+hasNextInt()	Sıradaki int mi?	boolean	    —
+hasNextLine()	Başka satır var mı?	boolean 	—
 
 */
