@@ -86,6 +86,8 @@ public class NextVsNextLine {
 next() boşluğa kadar okur (tek kelime)
 nextLine() Enter'a kadar okur (tüm satır).
 
+⚠️ Dikkat: nextInt(), nextDouble(), next() gibi metodlardan sonra nextLine() kullanacaksan, arada fazladan bir scanner.nextLine() çağrısı yap.
+
 ---
 Girdi Doğrulama
 Sayı beklediğin yere metin girilmesini hasNextInt() gibi metodlarla kontrol edebilirsin:
