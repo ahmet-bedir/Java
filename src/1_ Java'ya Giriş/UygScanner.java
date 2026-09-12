@@ -39,7 +39,6 @@ hasNextLine()	Başka satır var mı?	    boolean 	—
 
 örnek:
 
-```java
 import java.util.Scanner;
 
 public class FarkliTipler {
@@ -63,8 +62,12 @@ public class FarkliTipler {
         scanner.close();
     }
 }
-```
+
 ---
+import java.util.Scanner;
+
+public class NextVsNextLine {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("next() ile oku: ");
@@ -78,10 +81,14 @@ public class FarkliTipler {
         System.out.println("Okunan: " + satir);
 
         scanner.close();
+    }
+}
+next() boşluğa kadar okur (tek kelime)
+nextLine() Enter'a kadar okur (tüm satır).
 
 ---
 Girdi Doğrulama
-Kullanıcıya güvenme. Sayı beklediğin yere metin girebilir. hasNextInt() gibi metodlarla kontrol edebilirsin:
+Sayı beklediğin yere metin girilmesini hasNextInt() gibi metodlarla kontrol edebilirsin:
 
 import java.util.Scanner;
 
