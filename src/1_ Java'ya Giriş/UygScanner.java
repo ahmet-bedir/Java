@@ -28,7 +28,7 @@ Scanner Metodları
 
 Metod	        Ne Okur	                Dönüş Tipi	Örnek Girdi
 nextLine()	    Satırın tamamını	    String	    Merhaba Dünya
-next()	        İlk kelimeyi	String	    Merhaba
+next()	        İlk kelimeyi	        String	    Merhaba
 nextInt()	    Tam sayı	            int	        42
 nextDouble()	Ondalıklı sayı	        double	    3.14
 nextLong()	    Büyük tam sayı	        long	    9000000000
@@ -63,6 +63,32 @@ public class FarkliTipler {
         scanner.close();
     }
 }
- ```
+```
+---
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("next() ile oku: ");
+        String kelime = scanner.next();       // Sadece ilk kelimeyi okur
+        System.out.println("Okunan: " + kelime);
+
+        scanner.nextLine();  // Kalan kısmı temizle (nextInt(), nextDouble() gibi metodlar sayıyı okur ama Enter karakterini (\n) okumaz. Bu karakter buffer'da kalır. Hemen arkasından nextLine() çağırırsan, nextLine() buffer'daki \n'i okur ve boş string döndürür)
+
+        System.out.print("nextLine() ile oku: ");
+        String satir = scanner.nextLine();    // Tüm satırı okur
+        System.out.println("Okunan: " + satir);
+
+        scanner.close();Scanner scanner = new Scanner(System.in);
+
+        System.out.print("next() ile oku: ");
+        String kelime = scanner.next();       // Sadece ilk kelimeyi okur
+        System.out.println("Okunan: " + kelime);
+
+        scanner.nextLine();  // Kalan kısmı temizle (birazdan açıklayacağız)
+
+        System.out.print("nextLine() ile oku: ");
+        String satir = scanner.nextLine();    // Tüm satırı okur
+        System.out.println("Okunan: " + satir);
+
+        scanner.close();
 
 */
