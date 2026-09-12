@@ -25,7 +25,6 @@ public class UygScanner {
 
 ---
 Scanner Metodları
-Scanner farklı veri tipleri için farklı metodlar sunar:
 
 Metod	        Ne Okur	            Dönüş Tipi	Örnek Girdi
 nextLine()	    Satırın tamamını	String	    Merhaba Dünya
@@ -34,8 +33,36 @@ nextInt()	    Tam sayı	        int	        42
 nextDouble()	Ondalıklı sayı	    double	    3.14
 nextLong()	    Büyük tam sayı	    long	    9000000000
 nextFloat()     Ondalıklı sayı	    float	    3.14
-nextBoolean()	Boolean	boolean	    true
+nextBoolean()	Boolean	            boolean	    true
 hasNextInt()	Sıradaki int mi?	boolean	    —
 hasNextLine()	Başka satır var mı?	boolean 	—
+
+örnek:
+
+```java
+import java.util.Scanner;
+
+public class FarkliTipler {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Adınız: ");
+        String ad = scanner.nextLine();
+
+        System.out.print("Yaşınız: ");
+        int yas = scanner.nextInt();
+
+        System.out.print("Boyunuz (m): ");
+        double boy = scanner.nextDouble();
+
+        System.out.println("\n--- Bilgileriniz ---");
+        System.out.println("Ad: " + ad);
+        System.out.println("Yaş: " + yas);
+        System.out.println("Boy: " + boy + " m");
+
+        scanner.close();
+    }
+}
+ ```
 
 */
