@@ -77,18 +77,28 @@ public class FarkliTipler {
         String satir = scanner.nextLine();    // Tüm satırı okur
         System.out.println("Okunan: " + satir);
 
-        scanner.close();Scanner scanner = new Scanner(System.in);
-
-        System.out.print("next() ile oku: ");
-        String kelime = scanner.next();       // Sadece ilk kelimeyi okur
-        System.out.println("Okunan: " + kelime);
-
-        scanner.nextLine();  // Kalan kısmı temizle (birazdan açıklayacağız)
-
-        System.out.print("nextLine() ile oku: ");
-        String satir = scanner.nextLine();    // Tüm satırı okur
-        System.out.println("Okunan: " + satir);
-
         scanner.close();
 
+---
+Girdi Doğrulama
+Kullanıcıya güvenme. Sayı beklediğin yere metin girebilir. hasNextInt() gibi metodlarla kontrol edebilirsin:
+
+import java.util.Scanner;
+
+public class GirdiDogrulama {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Bir tam sayı girin: ");
+
+        if (scanner.hasNextInt()) {
+            int sayi = scanner.nextInt();
+            System.out.println("Girdiğiniz sayı: " + sayi);
+        } else {
+            System.out.println("Bu bir tam sayı değil!");
+        }
+
+        scanner.close();
+    }
+}
 */
