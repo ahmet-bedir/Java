@@ -74,7 +74,7 @@ public class NextVsNextLine {
         String kelime = scanner.next();       // Sadece ilk kelimeyi okur
         System.out.println("Okunan: " + kelime);
 
-        scanner.nextLine();  // Kalan kısmı temizle (nextInt(), nextDouble() gibi metodlar sayıyı okur ama Enter karakterini (\n) okumaz. Bu karakter buffer'da kalır. Hemen arkasından nextLine() çağırırsan, nextLine() buffer'daki \n'i okur ve boş string döndürür)
+        scanner.nextLine();  // Kalan kısmı temizle (next(), nextInt(), nextDouble() gibi metodlar sayıyı okur ama Enter karakterini (\n) okumaz. Bu karakter buffer'da kalır. Hemen arkasından nextLine() çağırırsan, nextLine() buffer'daki \n'i okur ve boş string döndürür)
 
         System.out.print("nextLine() ile oku: ");
         String satir = scanner.nextLine();    // Tüm satırı okur
@@ -87,27 +87,4 @@ next() boşluğa kadar okur (tek kelime)
 nextLine() Enter'a kadar okur (tüm satır).
 
 ⚠️ Dikkat: nextInt(), nextDouble(), next() gibi metodlardan sonra nextLine() kullanacaksan, arada fazladan bir scanner.nextLine() çağrısı yap.
-
----
-Girdi Doğrulama
-Sayı beklediğin yere metin girilmesini hasNextInt() gibi metodlarla kontrol edebilirsin:
-
-import java.util.Scanner;
-
-public class GirdiDogrulama {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Bir tam sayı girin: ");
-
-        if (scanner.hasNextInt()) {
-            int sayi = scanner.nextInt();
-            System.out.println("Girdiğiniz sayı: " + sayi);
-        } else {
-            System.out.println("Bu bir tam sayı değil!");
-        }
-
-        scanner.close();
-    }
-}
 */

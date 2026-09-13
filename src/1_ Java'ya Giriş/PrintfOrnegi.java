@@ -1,4 +1,4 @@
-public class Printf {
+public class PrintfOrnegi {
     public static void main(String[] args) {
         String isim = "Ali";
         int yas = 25;
@@ -14,6 +14,7 @@ print — Yazdırdıktan sonra, alt satıra geçmez
 
 
 printf — Formatlı yazdırma
+
 %s → String (metin)
 
 %d → Integer (tam sayı)
