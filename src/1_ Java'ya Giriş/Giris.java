@@ -7,5 +7,5 @@ public class Giris {
     }
 }
 /*
-Dikkat: Dosya adı, public sınıf adıyla birebir aynı olmalı. Bu sınıf HelloWorld ise dosya HelloWorld.java olmak zorunda. helloworld.java veya Hello_World.java olmaz. Java büyük-küçük harf duyarlıdır (case-sensitive).
+Dikkat: Dosya adı, public sınıf adıyla birebir aynı olmalı. Bu sınıf Giris ise dosya adı Giris.java olmak zorunda. giris.java veya javaya_giris.java olmaz. Java büyük-küçük harf duyarlıdır (case-sensitive).
 */
