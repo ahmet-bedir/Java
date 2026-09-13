@@ -1,7 +1,7 @@
 // Klavyeden sayı girilinceye kadar girdiyi tekrar eden program.
 import java.util.Scanner;
 
-public class GirdiyDogruAl {
+public class GirdiyiDogruAl {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int sayi = 0;

@@ -87,4 +87,29 @@ next() boşluğa kadar okur (tek kelime)
 nextLine() Enter'a kadar okur (tüm satır).
 
 ⚠️ Dikkat: nextInt(), nextDouble(), next() gibi metodlardan sonra nextLine() kullanacaksan, arada fazladan bir scanner.nextLine() çağrısı yap.
+
+---
+Alternatif Çözüm: Her Şeyi nextLine() ile Oku
+Bazı geliştiriciler sorunu tamamen ortadan kaldırmak için her şeyi nextLine() ile okuyup sonra dönüştürür:
+
+import java.util.Scanner;
+
+public class HerSeyNextLine {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Yaşınız: ");
+        int yas = Integer.parseInt(scanner.nextLine());  // String → int
+
+        System.out.print("Boyunuz: ");
+        double boy = Double.parseDouble(scanner.nextLine());  // String → double
+
+        System.out.print("Adınız: ");
+        String ad = scanner.nextLine();
+
+        System.out.printf("%s, %d yaşında, %.2f m%n", ad, yas, boy);
+
+        scanner.close();
+    }
+}
 */
