@@ -12,8 +12,8 @@ public class Printf {
 println — Yazdırdıktan sonra, alt satıra geçer
 print — Yazdırdıktan sonra, alt satıra geçmez
 
-printf — Formatlı yazdırma
 
+printf — Formatlı yazdırma
 %s → String (metin)
 
 %d → Integer (tam sayı)

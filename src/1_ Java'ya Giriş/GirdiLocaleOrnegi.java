@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Locale;
 
-public class LocaleOrnegi {
+public class GirdiLocaleOrnegi {
     public static void main(String[] args) {
         // ABD locale'i ile Scanner oluştur (nokta = ondalık ayırıcı)
         Scanner scanner = new Scanner(System.in).useLocale(Locale.US);
