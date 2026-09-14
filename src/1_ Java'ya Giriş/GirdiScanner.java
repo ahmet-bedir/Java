@@ -112,4 +112,32 @@ public class HerSeyNextLine {
         scanner.close();
     }
 }
+
+---
+Scanner Kapatma ve Kaynak Yönetimi
+Scanner'ı kapamak iyi bir alışkanlıktır. İki yöntem var:
+
+Manuel Kapatma
+Scanner scanner = new Scanner(System.in);
+// ... kullanım ...
+scanner.close();  // Manuel kapat
+
+Try-with-Resources
+Java 7'den itibaren try-with-resources kullanabilirsin. Blok bitince Scanner otomatik kapanır:
+
+import java.util.Scanner;
+
+public class TryWithResources {
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Bir sayı girin: ");
+            int sayi = scanner.nextInt();
+            System.out.println("Girdiğiniz: " + sayi);
+        }  // scanner.close() otomatik çağrılır
+    }
+}
+
+⚠️ Dikkat: System.in üzerindeki Scanner'ı kapattığında, System.in de kapanır ve tekrar açılamaz. Yani programda ikinci bir Scanner oluşturamazsın. Küçük programlarda sorun olmaz ama büyük projelerde Scanner'ı başta bir kere oluşturup tüm program boyunca kullanmak daha iyi.
+
+
 */

@@ -20,3 +20,4 @@ public class GirdiKontrol {
         scanner.close();
     }
 }
+// Bu program tek seferlik!
