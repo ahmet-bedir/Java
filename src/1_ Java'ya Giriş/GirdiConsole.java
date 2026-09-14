@@ -9,11 +9,13 @@ public class GirdiConsole {
 
             String kayitliParola = "abc";
             String parolaDonusum = String.valueOf(parola);
-            
+
             if (kayitliParola.equals(parolaDonusum)){
-            System.out.println("Giriş başarılı");
+                System.out.println("=== Giriş Başarılı ===");
+                System.out.println("Hoşgeldin, " + isim);
+            }else{
+                System.out.println("Giriş başarısız!");
             }
-            
         }
     }
 }

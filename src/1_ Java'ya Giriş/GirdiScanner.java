@@ -138,6 +138,4 @@ public class TryWithResources {
 }
 
 ⚠️ Dikkat: System.in üzerindeki Scanner'ı kapattığında, System.in de kapanır ve tekrar açılamaz. Yani programda ikinci bir Scanner oluşturamazsın. Küçük programlarda sorun olmaz ama büyük projelerde Scanner'ı başta bir kere oluşturup tüm program boyunca kullanmak daha iyi.
-
-
 */
