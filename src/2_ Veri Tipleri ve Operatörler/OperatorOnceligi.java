@@ -9,7 +9,7 @@ public class OperatorOnceligi {
         System.out.println("(2 + 3) * 4 = " + sonuc2); // 20
 
         // Karmaşık ifade
-        boolean sonuc3 = 5 > 3 && 10 < 20;
+        boolean sonuc3 = 5 > 3 && 10 < 20 || false;
         System.out.println("5 > 3 && 10 < 20 || false = " + sonuc3); // true
     }
 }
