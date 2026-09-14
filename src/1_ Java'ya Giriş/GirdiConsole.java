@@ -19,3 +19,4 @@ public class GirdiConsole {
         }
     }
 }
+// Console.readPassword() parolayı ekranda göstermeden okur. Güvenlik gerektiren uygulamalar için kullanılır. Ama IDE'lerin console'unda çalışmayabilir.
