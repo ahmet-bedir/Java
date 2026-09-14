@@ -15,6 +15,8 @@ int	    4 byte	0	        -2,147,483,648	                2,147,483,647	          
 long	8 byte	0L	        -9,223,372,036,854,775,808	    9,223,372,036,854,775,807	Çok büyük tam sayılar
 float	4 byte	0.0f	    ≈ ±1.4 × 10⁻⁴⁵	                ≈ ±3.4 × 10³⁸	            Ondalıklı (düşük hassasiyet)
 double	8 byte	0.0d	    ≈ ±4.9 × 10⁻³²⁴	                ≈ ±1.8 × 10³⁰⁸	            Ondalıklı (yüksek hassasiyet)
-char	2 byte	'\u0000'	0	    65,535	Tek karakter (Unicode)
-boolean	~1 bit	false	    false	true	Doğru/yanlış
+char	2 byte	'\u0000'	0	                            65,535	                    Tek karakter (Unicode)
+boolean	~1 bit	false	    false	                        true	                    Doğru/yanlış
+
+
 */
