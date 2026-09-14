@@ -6,9 +6,11 @@ public class GirdiConsole {
         if (console != null) {
             String isim = console.readLine("Kullanıcı adı: ");
             char[] parola = console.readPassword("Parola: ");  // Ekranda gözükmez!
-            System.out.println("Giriş yapılıyor: " + isim);
-            String parolaDonusum = String.parseString(parola);
-            if (parola.equals(parolaDonusum)){
+
+            String kayitliParola = "abc";
+            String parolaDonusum = String.valueOf(parola);
+            
+            if (kayitliParola.equals(parolaDonusum)){
             System.out.println("Giriş başarılı");
             }
             
