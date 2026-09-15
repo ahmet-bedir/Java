@@ -18,5 +18,149 @@ double	8 byte	0.0d	    ≈ ±4.9 × 10⁻³²⁴	                ≈ ±1.8 × 10
 char	2 byte	'\u0000'	0	                            65,535	                    Tek karakter (Unicode)
 boolean	~1 bit	false	    false	                        true	                    Doğru/yanlış
 
+---
+byte
+1 byte = 8 bit. -128 ile 127 arası değer tutar. Genellikle dosya okuma/yazma işlemlerinde veya ağ programlamada karşılaşırsın.
+
+byte yas = 25;
+byte sicaklik = -10;
+byte maxByte = 127;
+// byte hata = 128; // HATA! byte max 127
+
+---
+short
+2 byte yer kaplar. -32,768 ile 32,767 arası. Dürüst olalım: pratikte neredeyse hiç kullanmayız. int zaten her yerde iş görüyor.
+
+short population = 30000;
+short altitude = -500;
+Eğer bellekten çok tasarruf etmen gereken büyük diziler varsa ve değerlerin bu aralıkta olduğunu biliyorsan short mantıklı olabilir. Ama çoğu zaman int kullan, hayatını kolaylaştır.
+
+---
+int
+4 byte. Yaklaşık ±2.1 milyar aralık. Java'da tam sayı deyince akla ilk gelen tip bu. Sayaçlar, indeksler, döngüler — hep int.
+
+int nufus = 85000000;
+int bakiye = -15000;
+int max = Integer.MAX_VALUE; // 2,147,483,647
+int min = Integer.MIN_VALUE; // -2,147,483,648
+
+System.out.println("Max int: " + max);
+System.out.println("Min int: " + min);
+
+💡 Java'da bir sayıyı yazarken (literal) varsayılan tip int'tir. Yani 42 yazdığında Java bunu int olarak algılar.
+
+---
+long
+8 byte. Devasa sayılar için. Zaman damgaları (timestamp), dosya boyutları, büyük ID'ler — bunlar long ister.
+
+long dunyaNufusu = 8000000000L; // Sonuna L koy!
+long timestamp = System.currentTimeMillis();
+long dosyaBoyutu = 5368709120L; // 5 GB in bytes
+
+System.out.println("Şu anki zaman: " + timestamp);
+⚠️ Dikkat: long literal yazarken sonuna L veya l eklemelisin. Küçük l sayı 1 ile karışabilir, bu yüzden büyük L kullan.
+
+// long hata = 8000000000;  // HATA! int aralığını aşıyor
+long dogru = 8000000000L;    // Sonuna L koyunca long olur
+
+---
+loat — Yeterli Hassasiyet
+4 byte, yaklaşık 6-7 basamak hassasiyet. Grafik programlama, oyun geliştirme gibi alanlarda bellek önemliyse kullanılır.
+
+java
+
+Kopyala
+float pi = 3.14f;          // Sonuna f koy!
+float sicaklik = 36.6f;
+float oran = 0.75f;
+
+System.out.println("Pi: " + pi);
+⚠️ Dikkat: Java'da ondalıklı sayılar varsayılan olarak double'dır. float kullanmak istiyorsan sonuna f eklemelisin.
+
+double — Varsayılan Ondalıklı
+8 byte, yaklaşık 15-16 basamak hassasiyet. Ondalıklı sayı gerektiğinde çoğu zaman double kullanırsın.
+
+java
+
+Kopyala
+double pi = 3.141592653589793;
+double maasBrut = 45750.50;
+double avogadro = 6.022e23; // Bilimsel notasyon
+
+System.out.println("Pi detaylı: " + pi);
+System.out.println("Avogadro: " + avogadro);
+float vs double — Hangisini Seçeyim?
+Kısa cevap: double kullan. Daha hassas, modern donanımda performans farkı yok denecek kadar az.
+
+java
+
+Kopyala
+float f = 0.1f + 0.2f;
+double d = 0.1 + 0.2;
+
+System.out.println("float:  " + f);  // 0.3
+System.out.println("double: " + d);  // 0.30000000000000004
+İkisi de tam doğru değil — bu ondalıklı sayıların doğasından kaynaklanan bir durum (IEEE 754). Ama double daha hassas olduğu için genellikle daha iyi sonuç verir.
+
+💡 Para hesaplamalarında ne float ne double kullan! Kuruş kaybedersin. BigDecimal sınıfını kullan — buna ileride değineceğiz.
+
+Karakter Tipi: char
+2 byte. Tek bir Unicode karakteri tutar. Tek tırnak (') ile yazılır.
+
+java
+
+Kopyala
+char harf = 'A';
+char rakam = '7';
+char turkce = 'Ş';
+char emoji = '♥';
+char unicode = '\u0041'; // 'A' nin Unicode karşılığı
+
+System.out.println(harf);     // A
+System.out.println(unicode);  // A
+char aslında sayısal bir tiptir — 0 ile 65,535 arası bir tam sayı tutar. Bu sayı, Unicode tablosundaki karakterin numarasıdır.
+
+java
+
+Kopyala
+char c = 'A';
+int sayisal = c;
+System.out.println(sayisal); // 65
+
+char d = 66;
+System.out.println(d); // B
+Dikkat: char ile String farklı şeyler. char tek karakter, String karakter dizisi. char primitive, String nesne.
+
+java
+
+Kopyala
+char c = 'A';       // Tek tırnak — char
+String s = "A";     // Çift tırnak — String
+// Bunlar aynı şey değil!
+Mantıksal Tip: boolean
+Sadece true veya false değeri alır. Koşullarda, kontrollerde, bayrak (flag) olarak kullanılır.
+
+java
+
+Kopyala
+boolean aktif = true;
+boolean ogrenci = false;
+boolean yetiskin = (yas >= 18);
+
+if (aktif) {
+    System.out.println("Kullanıcı aktif");
+}
+Bellekte kaç byte kapladığı JVM implementasyonuna bağlı. Spesifikasyon "1 bit bilgi" diyor ama pratikte genellikle 1 byte kullanılır.
+
+java
+
+Kopyala
+boolean sonuc = (10 > 5);      // true
+boolean esit = (3 == 4);       // false
+boolean degil = !true;         // false
+
+System.out.println(sonuc);     // true
+System.out.println(esit);      // false
+System.out.println(degil);     // false
 
 */
