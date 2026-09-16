@@ -190,4 +190,15 @@ public class VarsayilanDegerler {
     }
 }
 
+⚠️ Ama lokal değişkenlere varsayılan değer atanmaz! Metot içinde tanımladığın bir değişkeni kullanmadan önce mutlaka değer atamalısın, yoksa derleme hatası alırsın.
+
+void metot() {
+    int x;
+    // System.out.println(x); // DERLEME HATASI!
+    
+    int y = 0; // Bu doğru
+    System.out.println(y); // OK
+}
+
+
 */
