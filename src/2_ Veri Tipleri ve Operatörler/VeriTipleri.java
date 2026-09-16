@@ -1,13 +1,28 @@
-public class VeriTurleri {
+public class VeriTipleri {
     public static void main(String[] args) {
-        int maxInt = Integer.MAX_VALUE; // 2,147,483,647
+        byte minByte = Byte.MIN_VALUE; // -128
+        byte maxByte = Byte.MAX_VALUE; // 127
+        
+        short minShort = Short.MIN_VALUE; // -32,768
+        short maxShort = Short.MAX_VALUE; // 32,767
+        
         int minInt = Integer.MIN_VALUE; // -2,147,483,648
-
-        System.out.println("Max int: " + maxInt);
+        int maxInt = Integer.MAX_VALUE; // 2,147,483,647
+        
+        System.out.println("Min byte: " + minByte);
+        System.out.println("Max byte: " + maxByte);
+        
+        System.out.println("Min short: " + minShort);
+        System.out.println("Max short: " + maxShort);
+        
         System.out.println("Min int: " + minInt);
+        System.out.println("Max int: " + maxInt);
+        
     }
 }
 /*
+Primitive (İlkel) Veri Tipleri
+
 Tip	    Boyut	Varsayılan	Min Değer	                    Max Değer	                Kullanım
 byte	1 byte	0	        -128	                        127	                        Küçük sayılar, dosya verileri
 short	2 byte	0	        -32,768	                        32,767	                    Orta küçük sayılar
@@ -33,7 +48,8 @@ short
 
 short population = 30000;
 short altitude = -500;
-Eğer bellekten çok tasarruf etmen gereken büyük diziler varsa ve değerlerin bu aralıkta olduğunu biliyorsan short mantıklı olabilir. Ama çoğu zaman int kullan, hayatını kolaylaştır.
+
+Eğer bellekten çok tasarruf etmen gereken büyük diziler varsa ve değerlerin bu aralıkta olduğunu biliyorsan short mantıklı olabilir. Ama çoğu zaman int kullanılır.
 
 ---
 int
@@ -58,58 +74,53 @@ long timestamp = System.currentTimeMillis();
 long dosyaBoyutu = 5368709120L; // 5 GB in bytes
 
 System.out.println("Şu anki zaman: " + timestamp);
+
 ⚠️ Dikkat: long literal yazarken sonuna L veya l eklemelisin. Küçük l sayı 1 ile karışabilir, bu yüzden büyük L kullan.
 
 // long hata = 8000000000;  // HATA! int aralığını aşıyor
 long dogru = 8000000000L;    // Sonuna L koyunca long olur
 
 ---
-loat — Yeterli Hassasiyet
+float
 4 byte, yaklaşık 6-7 basamak hassasiyet. Grafik programlama, oyun geliştirme gibi alanlarda bellek önemliyse kullanılır.
 
-java
-
-Kopyala
 float pi = 3.14f;          // Sonuna f koy!
 float sicaklik = 36.6f;
 float oran = 0.75f;
 
 System.out.println("Pi: " + pi);
+
 ⚠️ Dikkat: Java'da ondalıklı sayılar varsayılan olarak double'dır. float kullanmak istiyorsan sonuna f eklemelisin.
 
-double — Varsayılan Ondalıklı
+---
+double
 8 byte, yaklaşık 15-16 basamak hassasiyet. Ondalıklı sayı gerektiğinde çoğu zaman double kullanırsın.
 
-java
-
-Kopyala
 double pi = 3.141592653589793;
 double maasBrut = 45750.50;
 double avogadro = 6.022e23; // Bilimsel notasyon
 
 System.out.println("Pi detaylı: " + pi);
 System.out.println("Avogadro: " + avogadro);
+
+---
 float vs double — Hangisini Seçeyim?
 Kısa cevap: double kullan. Daha hassas, modern donanımda performans farkı yok denecek kadar az.
 
-java
-
-Kopyala
 float f = 0.1f + 0.2f;
 double d = 0.1 + 0.2;
 
 System.out.println("float:  " + f);  // 0.3
 System.out.println("double: " + d);  // 0.30000000000000004
+
 İkisi de tam doğru değil — bu ondalıklı sayıların doğasından kaynaklanan bir durum (IEEE 754). Ama double daha hassas olduğu için genellikle daha iyi sonuç verir.
 
-💡 Para hesaplamalarında ne float ne double kullan! Kuruş kaybedersin. BigDecimal sınıfını kullan — buna ileride değineceğiz.
+💡 Para hesaplamalarında ne float ne double kullan! Kuruş kaybedersin. BigDecimal sınıfını kullan.
 
+---
 Karakter Tipi: char
 2 byte. Tek bir Unicode karakteri tutar. Tek tırnak (') ile yazılır.
 
-java
-
-Kopyala
 char harf = 'A';
 char rakam = '7';
 char turkce = 'Ş';
@@ -118,31 +129,26 @@ char unicode = '\u0041'; // 'A' nin Unicode karşılığı
 
 System.out.println(harf);     // A
 System.out.println(unicode);  // A
+
 char aslında sayısal bir tiptir — 0 ile 65,535 arası bir tam sayı tutar. Bu sayı, Unicode tablosundaki karakterin numarasıdır.
 
-java
-
-Kopyala
 char c = 'A';
 int sayisal = c;
 System.out.println(sayisal); // 65
 
 char d = 66;
 System.out.println(d); // B
+
 Dikkat: char ile String farklı şeyler. char tek karakter, String karakter dizisi. char primitive, String nesne.
 
-java
-
-Kopyala
 char c = 'A';       // Tek tırnak — char
 String s = "A";     // Çift tırnak — String
 // Bunlar aynı şey değil!
+
+---
 Mantıksal Tip: boolean
 Sadece true veya false değeri alır. Koşullarda, kontrollerde, bayrak (flag) olarak kullanılır.
 
-java
-
-Kopyala
 boolean aktif = true;
 boolean ogrenci = false;
 boolean yetiskin = (yas >= 18);
@@ -150,17 +156,38 @@ boolean yetiskin = (yas >= 18);
 if (aktif) {
     System.out.println("Kullanıcı aktif");
 }
+
 Bellekte kaç byte kapladığı JVM implementasyonuna bağlı. Spesifikasyon "1 bit bilgi" diyor ama pratikte genellikle 1 byte kullanılır.
 
-java
-
-Kopyala
-boolean sonuc = (10 > 5);      // true
-boolean esit = (3 == 4);       // false
-boolean degil = !true;         // false
+boolean sonuc = (10 > 5);      
+boolean esit = (3 == 4);       
+boolean degil = !true;         
 
 System.out.println(sonuc);     // true
 System.out.println(esit);      // false
 System.out.println(degil);     // false
+
+
+---
+Varsayılan Değerler
+Bir sınıfın alanı (field) olarak tanımlanan primitive değişkenlere otomatik varsayılan değer atanır:
+
+public class VarsayilanDegerler {
+    byte b;      // 0
+    short s;     // 0
+    int i;       // 0
+    long l;      // 0L
+    float f;     // 0.0f
+    double d;    // 0.0d
+    char c;      // '\u0000' (null karakter)
+    boolean bo;  // false
+
+    void yazdir() {
+        System.out.println("byte: " + b);
+        System.out.println("int: " + i);
+        System.out.println("boolean: " + bo);
+        System.out.println("char: [" + c + "]");
+    }
+}
 
 */
