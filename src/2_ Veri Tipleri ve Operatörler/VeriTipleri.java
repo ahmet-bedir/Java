@@ -33,6 +33,7 @@ double	8 byte	0.0d	    ≈ ±4.9 × 10⁻³²⁴	                ≈ ±1.8 × 10
 char	2 byte	'\u0000'	0	                            65,535	                    Tek karakter (Unicode)
 boolean	~1 bit	false	    false	                        true	                    Doğru/yanlış
 
+
 ---
 byte
 1 byte = 8 bit. -128 ile 127 arası değer tutar. Genellikle dosya okuma/yazma işlemlerinde veya ağ programlamada karşılaşırsın.
@@ -42,6 +43,7 @@ byte sicaklik = -10;
 byte maxByte = 127;
 // byte hata = 128; // HATA! byte max 127
 
+
 ---
 short
 2 byte yer kaplar. -32,768 ile 32,767 arası. Dürüst olalım: pratikte neredeyse hiç kullanmayız. int zaten her yerde iş görüyor.
@@ -50,6 +52,7 @@ short population = 30000;
 short altitude = -500;
 
 Eğer bellekten çok tasarruf etmen gereken büyük diziler varsa ve değerlerin bu aralıkta olduğunu biliyorsan short mantıklı olabilir. Ama çoğu zaman int kullanılır.
+
 
 ---
 int
@@ -64,6 +67,7 @@ System.out.println("Max int: " + max);
 System.out.println("Min int: " + min);
 
 💡 Java'da bir sayıyı yazarken (literal) varsayılan tip int'tir. Yani 42 yazdığında Java bunu int olarak algılar.
+
 
 ---
 long
@@ -80,6 +84,7 @@ System.out.println("Şu anki zaman: " + timestamp);
 // long hata = 8000000000;  // HATA! int aralığını aşıyor
 long dogru = 8000000000L;    // Sonuna L koyunca long olur
 
+
 ---
 float
 4 byte, yaklaşık 6-7 basamak hassasiyet. Grafik programlama, oyun geliştirme gibi alanlarda bellek önemliyse kullanılır.
@@ -92,6 +97,7 @@ System.out.println("Pi: " + pi);
 
 ⚠️ Dikkat: Java'da ondalıklı sayılar varsayılan olarak double'dır. float kullanmak istiyorsan sonuna f eklemelisin.
 
+
 ---
 double
 8 byte, yaklaşık 15-16 basamak hassasiyet. Ondalıklı sayı gerektiğinde çoğu zaman double kullanırsın.
@@ -102,6 +108,7 @@ double avogadro = 6.022e23; // Bilimsel notasyon
 
 System.out.println("Pi detaylı: " + pi);
 System.out.println("Avogadro: " + avogadro);
+
 
 ---
 float vs double — Hangisini Seçeyim?
@@ -116,6 +123,7 @@ System.out.println("double: " + d);  // 0.30000000000000004
 İkisi de tam doğru değil — bu ondalıklı sayıların doğasından kaynaklanan bir durum (IEEE 754). Ama double daha hassas olduğu için genellikle daha iyi sonuç verir.
 
 💡 Para hesaplamalarında ne float ne double kullan! Kuruş kaybedersin. BigDecimal sınıfını kullan.
+
 
 ---
 Karakter Tipi: char
@@ -144,6 +152,7 @@ Dikkat: char ile String farklı şeyler. char tek karakter, String karakter dizi
 char c = 'A';       // Tek tırnak — char
 String s = "A";     // Çift tırnak — String
 // Bunlar aynı şey değil!
+
 
 ---
 Mantıksal Tip: boolean
@@ -199,6 +208,7 @@ void metot() {
     int y = 0; // Bu doğru
     System.out.println(y); // OK
 }
+
 
 ---
 Bellekte Nasıl Saklanıyor?
