@@ -226,16 +226,22 @@ null olabilir mi?	Hayır	Evet
 Metot çağrılabilir mi?	Hayır	Evet
 == ne yapar?	Değer karşılaştırır	Adres karşılaştırır
 
-// Primitive — değer kopyalanır
-int x = 10;
-int y = x;
-y = 20;
-System.out.println(x); // 10 — x değişmedi
-
-// Referans — adres kopyalanır
-int[] dizi1 = {1, 2, 3};
-int[] dizi2 = dizi1;     // Aynı diziyi gösteriyor!
-dizi2[0] = 99;
-System.out.println(dizi1[0]); // 99 — dizi1 de değişti!
+public class Java {
+    public static void main(String[] args){
+        // Primitive — değer kopyalanır
+        int x = 10;
+        int y = x;
+        y = 20;
+        System.out.println("x = " + x); // 10 — x değişmedi
+        System.out.println("y = " + y); // 20
+            
+        // Referans — adres kopyalanır
+        int[] dizi1 = {1, 2, 3};
+        int[] dizi2 = dizi1;     // Aynı diziyi gösteriyor!
+        System.out.println(dizi1[0]); // 1
+            dizi2[0] = 99;
+        System.out.println(dizi1[0]); // 99 — dizi1 de değişti!
+    }
+}
 
 */
