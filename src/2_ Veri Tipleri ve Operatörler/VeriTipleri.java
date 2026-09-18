@@ -200,5 +200,42 @@ void metot() {
     System.out.println(y); // OK
 }
 
+---
+Bellekte Nasıl Saklanıyor?
+Primitive tipler stack bellek alanında saklanır. Bu onları çok hızlı yapar.
+
+int a = 5;
+int b = a;  // a'nın DEĞERİ kopyalanır
+b = 10;
+
+System.out.println(a); // 5 — a değişmedi!
+System.out.println(b); // 10
+
+Primitive'lerde bir değişkeni diğerine atadığında değer kopyalanır. İki değişken birbirinden bağımsızdır. Bu, nesnelerden (referans tipleri) farklıdır — nesnelerde adres kopyalanır, bu yüzden biri değişince diğeri de etkilenebilir.
+
+
+---
+Primitive Tipler vs Referans Tipler
+
+Java'da iki kategori veri tipi var: primitive ve referans. Bu farkı anlamak çok önemli çünkü davranışları tamamen farklı.
+
+Özellik	Primitive	Referans (Nesne)
+Bellekte	Stack'te değer	Stack'te adres, heap'te nesne
+Varsayılan	0, false, '\u0000'	null
+null olabilir mi?	Hayır	Evet
+Metot çağrılabilir mi?	Hayır	Evet
+== ne yapar?	Değer karşılaştırır	Adres karşılaştırır
+
+// Primitive — değer kopyalanır
+int x = 10;
+int y = x;
+y = 20;
+System.out.println(x); // 10 — x değişmedi
+
+// Referans — adres kopyalanır
+int[] dizi1 = {1, 2, 3};
+int[] dizi2 = dizi1;     // Aynı diziyi gösteriyor!
+dizi2[0] = 99;
+System.out.println(dizi1[0]); // 99 — dizi1 de değişti!
 
 */
