@@ -14,9 +14,10 @@ public class VeriTipleri {
         double maxDouble = Double.MAX_VALUE; // 1.7976931348623157
         char minChar = Character.MIN_VALUE; // '\u0000'
         char maxChar = Character.MAX_VALUE; // '\uffff'
-        double minDouble = Double.MIN_VALUE; // 4.9E-324
-        double maxDouble = Double.MAX_VALUE; 
+        boolean minBoolean = Boolean.FALSE;
+        boolean maxBoolean = Boolean.TRUE;
         
+        System.out.println("--- Min ve Max Değerler ---");
         System.out.println("Min byte: " + minByte);
         System.out.println("Max byte: " + maxByte);
         System.out.println("Min short: " + minShort);
@@ -31,8 +32,10 @@ public class VeriTipleri {
         System.out.println("Max double: " + maxDouble);
         System.out.println("Min char: " + minChar);
         System.out.println("Max char: " + maxChar);
+        System.out.println("Min boolean: " + minBoolean);
+        System.out.println("Max boolean: " + maxBoolean);
 
-        // Boyutları byte cinsinden
+        System.out.println("\n--- Boyutlar ---"); // Boyutları byte cinsinden
         System.out.println("byte boyutu: " + Byte.BYTES + " byte");
         System.out.println("short boyutu: " + Short.BYTES + " byte");
         System.out.println("int boyutu: " + Integer.BYTES + " byte");
@@ -40,6 +43,11 @@ public class VeriTipleri {
         System.out.println("float boyutu: " + Float.BYTES + " byte");
         System.out.println("double boyutu: " + Double.BYTES + " byte");
         System.out.println("char boyutu: " + Character.BYTES + " byte");
+        
+        System.out.println("\n--- Özel Değerler ---"); //Özel double değerler
+        System.out.println("Pozitif sonsuz: " + Double.POSITIVE_INFINITY);
+        System.out.println("Negatif sonsuz: " + Double.NEGATIVE_INFINITY);
+        System.out.println("Sayı değil: " + Double.NaN);
     }
 }
 /*
