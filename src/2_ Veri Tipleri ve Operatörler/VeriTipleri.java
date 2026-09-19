@@ -242,12 +242,12 @@ Primitive Tipler vs Referans Tipler
 
 Java'da iki kategori veri tipi var: primitive ve referans. Bu farkı anlamak çok önemli çünkü davranışları tamamen farklı.
 
-Özellik	Primitive	Referans (Nesne)
-Bellekte	Stack'te değer	Stack'te adres, heap'te nesne
-Varsayılan	0, false, '\u0000'	null
-null olabilir mi?	Hayır	Evet
-Metot çağrılabilir mi?	Hayır	Evet
-== ne yapar?	Değer karşılaştırır	Adres karşılaştırır
+Özellik	                Primitive	            Referans (Nesne)
+Bellekte	            Stack'te değer	        Stack'te adres, heap'te nesne
+Varsayılan	            0, false, '\u0000'	    null
+null olabilir mi?	    Hayır	                Evet
+Metot çağrılabilir mi?	Hayır	                Evet
+== ne yapar?	        Değer karşılaştırır	    Adres karşılaştırır
 
 public class Java {
     public static void main(String[] args){
@@ -268,4 +268,14 @@ public class Java {
 }
 
 Bu fark özellikle metotlara parametre geçerken çok önemli hale gelir. Primitive geçtiğinde kopya gider — metot orijinali değiştiremez. Referans geçtiğinde adres gider — metot nesneyi değiştirebilir.
+
+public static void artir(int sayi) {
+    sayi++; // Kopya üzerinde çalışır
+}
+
+public static void main(String[] args) {
+    int a = 5;
+    artir(a);
+    System.out.println(a); // 5 — değişmedi!
+}
 */
