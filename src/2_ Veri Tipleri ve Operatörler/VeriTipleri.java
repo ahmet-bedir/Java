@@ -1,27 +1,37 @@
 public class VeriTipleri {
     public static void main(String[] args) {
         byte minByte = Byte.MIN_VALUE; // -128
-        byte maxByte = Byte.MAX_VALUE; // 127
-        
+        byte maxByte = Byte.MAX_VALUE; // 127 
         short minShort = Short.MIN_VALUE; // -32,768
         short maxShort = Short.MAX_VALUE; // 32,767
-        
         int minInt = Integer.MIN_VALUE; // -2,147,483,648
         int maxInt = Integer.MAX_VALUE; // 2,147,483,647
+        long minLong = Long.MIN_VALUE; // -9,223,372,036,854,775,808
+        long maxLong = Long.MAX_VALUE; // 9,223,372,036,854,775,807
+        float minFloat = Float.MIN_VALUE; // 1.4E-45
+        float maxFloat = Float.MAX_VALUE; // 3.4028235E38
+        double minDouble = Double.MIN_VALUE; // 4.9E-324
+        double maxDouble = Double.MAX_VALUE; // 1.7976931348623157
+        char minChar = Character.MIN_VALUE; // '\u0000'
+        char maxChar = Character.MAX_VALUE; // '\uffff'
+        double minDouble = Double.MIN_VALUE; // 4.9E-324
+        double maxDouble = Double.MAX_VALUE; 
         
         System.out.println("Min byte: " + minByte);
         System.out.println("Max byte: " + maxByte);
-        
         System.out.println("Min short: " + minShort);
         System.out.println("Max short: " + maxShort);
-        
         System.out.println("Min int: " + minInt);
         System.out.println("Max int: " + maxInt);
-        
-        System.out.println("long  : " + Long.MIN_VALUE + " ~ " + Long.MAX_VALUE);
-        System.out.println("float : " + Float.MIN_VALUE + " ~ " + Float.MAX_VALUE);
-        System.out.println("double: " + Double.MIN_VALUE + " ~ " + Double.MAX_VALUE);
-        
+        System.out.println("Min long: " + minLong);
+        System.out.println("Max long: " + maxLong);
+        System.out.println("Min float: " + minFloat);
+        System.out.println("Max float: " + maxFloat);
+        System.out.println("Min double: " + minDouble);
+        System.out.println("Max double: " + maxDouble);
+        System.out.println("Min char: " + minChar);
+        System.out.println("Max char: " + maxChar);
+
         // Boyutları byte cinsinden
         System.out.println("byte boyutu: " + Byte.BYTES + " byte");
         System.out.println("short boyutu: " + Short.BYTES + " byte");
@@ -30,7 +40,6 @@ public class VeriTipleri {
         System.out.println("float boyutu: " + Float.BYTES + " byte");
         System.out.println("double boyutu: " + Double.BYTES + " byte");
         System.out.println("char boyutu: " + Character.BYTES + " byte");
-        System.out.println("boolean boyutu: " ++ " byte");
     }
 }
 /*
