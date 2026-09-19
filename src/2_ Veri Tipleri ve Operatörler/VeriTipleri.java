@@ -18,6 +18,19 @@ public class VeriTipleri {
         System.out.println("Min int: " + minInt);
         System.out.println("Max int: " + maxInt);
         
+        System.out.println("long  : " + Long.MIN_VALUE + " ~ " + Long.MAX_VALUE);
+        System.out.println("float : " + Float.MIN_VALUE + " ~ " + Float.MAX_VALUE);
+        System.out.println("double: " + Double.MIN_VALUE + " ~ " + Double.MAX_VALUE);
+        
+        // Boyutları byte cinsinden
+        System.out.println("byte boyutu: " + Byte.BYTES + " byte");
+        System.out.println("short boyutu: " + Short.BYTES + " byte");
+        System.out.println("int boyutu: " + Integer.BYTES + " byte");
+        System.out.println("long boyutu: " + Long.BYTES + " byte");
+        System.out.println("float boyutu: " + Float.BYTES + " byte");
+        System.out.println("double boyutu: " + Double.BYTES + " byte");
+        System.out.println("char boyutu: " + Character.BYTES + " byte");
+        //System.out.println("boolean boyutu: " + Boolean.BYTES + " byte");
     }
 }
 /*
@@ -254,4 +267,5 @@ public class Java {
     }
 }
 
+Bu fark özellikle metotlara parametre geçerken çok önemli hale gelir. Primitive geçtiğinde kopya gider — metot orijinali değiştiremez. Referans geçtiğinde adres gider — metot nesneyi değiştirebilir.
 */
