@@ -30,7 +30,7 @@ public class VeriTipleri {
         System.out.println("float boyutu: " + Float.BYTES + " byte");
         System.out.println("double boyutu: " + Double.BYTES + " byte");
         System.out.println("char boyutu: " + Character.BYTES + " byte");
-        //System.out.println("boolean boyutu: " + Boolean.BYTES + " byte");
+        System.out.println("boolean boyutu: " ++ " byte");
     }
 }
 /*
@@ -278,4 +278,92 @@ public static void main(String[] args) {
     artir(a);
     System.out.println(a); // 5 — değişmedi!
 }
+
+
+---
+İkiye Tümleyen (Two's Complement)
+Java'da negatif tam sayılar ikiye tümleyen (two's complement) yöntemiyle saklanır.
+
+Bir byte için:
+
+Pozitif sayılar normal ikili: 5 = 00000101
+
+Negatif sayılar: tüm bitleri tersle, 1 ekle
+
+- 5 = 00000101 → tersle: 11111010 → +1: 11111011 = -5
+
+En soldaki bit (MSB) işaret biti: 0 = pozitif, 1 = negatif
+
+
+byte b = 127;  // 01111111
+b++;           // 10000000 = -128 (taşma!)
+System.out.println(b); // -128
+
+// Bu yüzden byte aralığı -128 ile 127
+// 0 pozitif tarafta sayılır: 0..127 = 128 değer, -128..-1 = 128 değer
+Bu, overflow'un neden "döndüğünü" açıklar. Max değerden bir fazlası, en küçük negatif sayıya denk gelir.
+
+
+---
+Tip Promosyonu (Type Promotion)
+Farklı tipler bir arada kullanıldığında Java otomatik olarak küçük tipi büyüğe çevirir. Buna tip promosyonu denir.
+
+ 
+byte a = 10;
+byte b = 20;
+// byte c = a + b; // HATA! a + b sonucu int'tir
+int c = a + b;     // Doğru
+
+short s = 100;
+int i = 200;
+long l = s + i;    // short + int = int, int → long
+
+float f = 3.14f;
+double d = f + 1;  // float + int = float, float → double
+
+Promosyon kuralları:
+
+- byte, short, char → aritmetik işlemde int'e yükseltilir
+
+- Operandlardan biri long ise diğeri de long olur
+
+- Operandlardan biri float ise diğeri de float olur
+
+- Operandlardan biri double ise diğeri de double olur
+
+
+char c = 'A';   // 65
+int sonuc = c + 1; // 66 — char + int = int
+System.out.println(sonuc);       // 66
+System.out.println((char) sonuc); // B
+
+
+---
+Wrapper Sınıflarla Karşılaştırma
+Her primitive tipin bir nesne karşılığı (wrapper class) vardır.
+
+
+int primitiveInt = 42;           // Primitive — stack'te
+Integer wrapperInt = 42;         // Nesne — heap'te (autoboxing)
+
+// Primitive null olamaz
+// int x = null; // DERLEME HATASI!
+
+// Wrapper null olabilir
+Integer y = null; // OK
+// int z = y;     // NullPointerException! (unboxing)
+
+Primitive	Wrapper
+byte	    Byte
+short	    Short
+int	        Integer
+long	    Long
+float	    Float
+double	    Double
+char	    Character
+boolean	    Boolean
+
+Koleksiyonlar (List, Map vb.) primitive alamaz, wrapper gerekir:
+List<Integer> sayilar = new ArrayList<>(); // int değil, Integer
+sayilar.add(42); // Autoboxing: int → Integer
 */
