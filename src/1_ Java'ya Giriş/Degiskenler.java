@@ -16,15 +16,14 @@ public class Degiskenler {
 /*
 Değişkeni önce tanımlayıp sonra da değer atayabilirsin:
 
-```java
 int sayi;        // Tanımlama (declaration)
 sayi = 42;       // Değer atama (assignment)
 
 // Veya tek satırda:
 int sayi = 42;   // Tanımlama + ilk değer atama (initialization)
-```
 
 ⚠️ Dikkat: Değer atamadan bir lokal değişkeni kullanmaya çalışırsan Java hata verir.
+
 
 ---
 Primitive (İlkel) Veri Tipleri
@@ -43,6 +42,7 @@ short ortaSayi = 30000;
 int normalSayi = 2_000_000_000;    // Sayıların içinde _ (alt çizgi) kullanarak okunabilirliği artırabilirsin.
 long buyukSayi = 9_000_000_000L;   // L soneki zorunlu!
 
+
 ---
 Ondalıklı Sayı Tipleri
 Tip	     Boyut	  Hassasiyet	  Kullanım
@@ -54,17 +54,19 @@ double pi_double = 3.141592653589793;  // Varsayılan, sonek gerek yok
 
 float kullanırken sonuna f eklemelisin. Eklemezsen Java onu double sayar ve float değişkenine double atayamazsın (daraltıcı dönüşüm hatası).
 
+
 ---
 boolean ve char
 
 boolean javaGüzelMi = true;
 boolean zor = false;
 char harf = 'J';
-char rakam = '7';       // Bu bir sayı değil, karakter!
+char rakam = '7';        // Bu bir sayı değil, karakter!
 char unicode = '\u0041'; // Unicode ile 'A'
 
 - `boolean`: Sadece true veya false alır. Koşul kontrollerinde kullanılır.
 - `char`: Tek bir karakter saklar. Tek tırnak ile yazılır: 'A'. Çift tırnak String için kullanılır: "A"
+
 
 ---
 String: Metin Tipi
@@ -89,6 +91,7 @@ System.out.println(tamIsim.toLowerCase());  // ali yılmaz
 // Belirli karakteri alma (index 0'dan başlar)
 System.out.println("İlk harf: " + tamIsim.charAt(0));  // A
 
+
 ---
 Var Anahtar Kelimesi (Java 10+)
 Java 10'dan itibaren lokal değişkenlerde var kullanabilirsin. Java tipi otomatik anlar:
@@ -104,6 +107,7 @@ var x;          // HATA! Başlangıç değeri olmadan var kullanamassın
 var y = null;   // HATA! null'dan tip çıkarılamaz
 
 // var dinamik tipleme değildir. Java hâlâ statik tipli. Sadece sen tipi yazmıyorsun, derleyici çıkarıyor. Tip belirlendikten sonra değiştirilemez.
+
 
 ---
 İsimlendirme Kuralları ve Gelenekleri
@@ -142,7 +146,7 @@ Sınıf	            PascalCase	           OgrenciBilgisi, HesapMakinesi
 Sabit (constant)	SCREAMING_SNAKE_CASE   MAX_BOYUT, PI_DEGERI
 Paket	            küçük harf	           com.example.proje
 
-```java
+
 public class IsimlendirmeOrnekleri {
     // Sabit — BÜYÜK HARF + alt çizgi
     static final double PI_DEGERI = 3.14159;
@@ -158,13 +162,12 @@ public class IsimlendirmeOrnekleri {
         System.out.println("Geçti mi? " + sinifiGectiMi);
     }
 }
-```
+
 
 ---
 Java'nın Anahtar Kelimeleri
 Java'da 50+ anahtar kelime (reserved word) var. Bunlar değişken, metot veya sınıf adı olarak kullanılamaz:
 
-```text
 abstract    assert        boolean       break       byte
 case        catch         char          class       const
 continue    default       do            double      else
@@ -175,5 +178,4 @@ new         package       private       protected   public
 return      short         static        strictfp    super
 switch      synchronized  this          throw       throws
 transient   try           void          volatile    while
-```
 */
