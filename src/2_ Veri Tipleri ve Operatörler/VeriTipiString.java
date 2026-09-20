@@ -168,8 +168,8 @@ System.out.println(kelimeler.length); // 2
 
 split() parametre olarak regex alır. Bu yüzden nokta ile bölmek istersen "\\." yazmalısın — çünkü regex'te . "herhangi bir karakter" demek.
 
+---
 trim() ve strip() — Boşluk Temizleme
-
 
 String s = "   Merhaba   ";
 System.out.println("[" + s.trim() + "]");  // [Merhaba]
@@ -178,10 +178,11 @@ System.out.println("[" + s.strip() + "]"); // [Merhaba] (Java 11+)
 // Sadece baş veya son
 System.out.println("[" + s.stripLeading() + "]");  // [Merhaba   ]
 System.out.println("[" + s.stripTrailing() + "]");  // [   Merhaba]
+
 trim() sadece ASCII boşluklarını temizler. strip() (Java 11+) Unicode boşluk karakterlerini de temizler. Modern Java'da strip() tercih et.
 
+---
 replace() — Değiştirme
-
 
 String s = "Java çok zor";
 String yeni = s.replace("zor", "kolay");
@@ -191,11 +192,11 @@ System.out.println(s);    // "Java çok zor" — orijinal değişmedi!
 // Tüm geçenleri değiştirir
 String telefon = "0532-123-45-67";
 String temiz = telefon.replace("-", "");
-System.out.println(temiz); // "0532123456 7"
-toUpperCase() ve toLowerCase()
-java
+System.out.println(temiz); // "05321234567"
 
-Kopyala
+---
+toUpperCase() ve toLowerCase()
+
 String s = "Java";
 System.out.println(s.toUpperCase()); // "JAVA"
 System.out.println(s.toLowerCase()); // "java"
