@@ -59,7 +59,7 @@ System.out.println(c.equals(d)); // true — içerik aynı
 new her zaman heap'te yeni bir nesne oluşturur, pool'u kullanmaz.
 
 ---
-equals() vs ==
+`equals()` vs `==`
 İki String'in içeriğini karşılaştırmak istiyorsan `equals()` kullan, == değil.
 
 == : İki referansın aynı nesneyi gösterip göstermediğini kontrol eder
@@ -99,6 +99,114 @@ System.out.println(girdi.equals("Java"));            // false
 System.out.println(girdi.equalsIgnoreCase("Java"));  // true
 
 Kullanıcı girdisi alırken çok işe yarar. Kullanıcı "JAVA", "Java" veya "java" yazabilir — hepsini yakala.
+
+---
+Sık Kullanılan String Metotları
+
+---
+length() — Uzunluk
+
+String s = "Merhaba";
+System.out.println(s.length()); // 7
+
+Boş String ile null karıştırma:
+
+String bos = "";
+String nul = null;
+
+System.out.println(bos.length()); // 0
+// System.out.println(nul.length()); // NullPointerException!
+
+---
+charAt(index) — Belirli Karakter
+
+String s = "Java";
+System.out.println(s.charAt(0)); // 'J'
+System.out.println(s.charAt(3)); // 'a'
+// s.charAt(4) → StringIndexOutOfBoundsException!
+
+İndeks 0'dan başlar, length() - 1'e kadar gider.
+
+---
+substring() — Alt Dize
+
+String s = "Merhaba Dünya";
+System.out.println(s.substring(8));     // "Dünya"
+System.out.println(s.substring(0, 7));  // "Merhaba"
+
+substring(baslangic, bitis) — başlangıç dahil, bitiş hariç.
+
+---
+indexOf() ve contains() — Arama
+
+String s = "Java programlama dili";
+
+System.out.println(s.indexOf("program"));  // 5
+System.out.println(s.indexOf("Python"));   // -1 (bulunamadı)
+System.out.println(s.contains("Java"));    // true
+System.out.println(s.contains("java"));    // false (büyük/küçük harf duyarlı)
+
+---
+split() — Bölme
+
+String csv = "Ali,Veli,Ayşe,Fatma";
+String[] isimler = csv.split(",");
+
+for (String isim : isimler) {
+    System.out.println(isim);
+}
+// Ali
+// Veli
+// Ayşe
+// Fatma
+
+
+String metin = "Merhaba   Dünya";
+String[] kelimeler = metin.split("\\s+"); // Bir veya daha fazla boşluk
+
+System.out.println(kelimeler.length); // 2
+
+split() parametre olarak regex alır. Bu yüzden nokta ile bölmek istersen "\\." yazmalısın — çünkü regex'te . "herhangi bir karakter" demek.
+
+trim() ve strip() — Boşluk Temizleme
+
+
+String s = "   Merhaba   ";
+System.out.println("[" + s.trim() + "]");  // [Merhaba]
+System.out.println("[" + s.strip() + "]"); // [Merhaba] (Java 11+)
+
+// Sadece baş veya son
+System.out.println("[" + s.stripLeading() + "]");  // [Merhaba   ]
+System.out.println("[" + s.stripTrailing() + "]");  // [   Merhaba]
+trim() sadece ASCII boşluklarını temizler. strip() (Java 11+) Unicode boşluk karakterlerini de temizler. Modern Java'da strip() tercih et.
+
+replace() — Değiştirme
+
+
+String s = "Java çok zor";
+String yeni = s.replace("zor", "kolay");
+System.out.println(yeni); // "Java çok kolay"
+System.out.println(s);    // "Java çok zor" — orijinal değişmedi!
+
+// Tüm geçenleri değiştirir
+String telefon = "0532-123-45-67";
+String temiz = telefon.replace("-", "");
+System.out.println(temiz); // "0532123456 7"
+toUpperCase() ve toLowerCase()
+java
+
+Kopyala
+String s = "Java";
+System.out.println(s.toUpperCase()); // "JAVA"
+System.out.println(s.toLowerCase()); // "java"
+
+⚠️ Türkçe tuzağı: "title".toUpperCase() → "TITLE", ama Türkçe locale'de "ı".toUpperCase() → "I" değil, "I" olmalı. Locale belirtmen gerekebilir:
+
+
+String s = "sığır";
+System.out.println(s.toUpperCase(new java.util.Locale("tr", "TR")));
+// "SIĞIR" — Türkçe İ/I kuralına uygun
+
 
 
 */
