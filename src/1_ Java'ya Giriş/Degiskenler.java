@@ -93,25 +93,6 @@ System.out.println("İlk harf: " + tamIsim.charAt(0));  // A
 
 Çift tırnak arasına yazdığın her şey bir String literal'dir. Java bunu arka planda bir String nesnesi olarak oluşturur.
 
-String Immutable'dır — Değiştirilemez
-String nesnesi oluşturulduktan sonra içeriği asla değişmez.
-
-
-String mesaj = "Merhaba";
-mesaj = mesaj + " Dünya";
-
-System.out.println(mesaj); // "Merhaba Dünya"
-
-Burada "Merhaba" nesnesi değişmedi. Java yeni bir "Merhaba Dünya" nesnesi oluşturdu ve mesaj değişkeni artık bu yeni nesneye işaret ediyor. Eski "Merhaba" nesnesi bellekte öylece duruyor (garbage collector temizleyene kadar).
-
-
-String s = "Java";
-String s2 = s.toUpperCase(); // Yeni nesne oluşur
-
-System.out.println(s);  // "Java" — orijinal değişmedi!
-System.out.println(s2); // "JAVA" — yeni nesne
-
-💡 String üzerinde çağırdığın her metot (toUpperCase, trim, replace vb.) orijinal String'i değiştirmez, yeni bir String döner.
 
 ---
 Var Anahtar Kelimesi (Java 10+)
