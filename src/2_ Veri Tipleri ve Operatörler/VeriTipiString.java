@@ -209,5 +209,32 @@ System.out.println(s.toUpperCase(new java.util.Locale("tr", "TR")));
 // "SIĞIR" — Türkçe İ/I kuralına uygun
 
 
+---
+String.format() — Biçimlendirme
+
+String ad = "Ahmet";
+int yas = 25;
+double not_ = 3.75;
+
+String mesaj = String.format("Ad: %s, Yaş: %d, Not: %.2f", ad, yas, not_);
+System.out.println(mesaj); // Ad: Ahmet, Yaş: 25, Not: 3.75
+
+Format	Açıklama	        Örnek
+%s	    String	            "Ahmet"
+%d	    Tam sayı	        42
+%f	    Ondalıklı	        3.140000
+%.2f	2 basamak ondalık	3.14
+%n	    Yeni satır	        (satır sonu)
+%b	    Boolean	            true
+
+Java 15+ ile text block ve formatted() metodu:
+
+String html = """
+    <html>
+        <body>
+            <p>Merhaba %s!</p>
+        </body>
+    </html>
+    """.formatted(ad);
 
 */
