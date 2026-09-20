@@ -236,5 +236,4 @@ String html = """
         </body>
     </html>
     """.formatted(ad);
-
 */
