@@ -296,21 +296,18 @@ String sonuc = sb.toString();
 StringBuilder mutable (değiştirilebilir) bir karakter dizisi tutar. append() çağırdığında mevcut diziyi genişletir, yeni nesne oluşturmaz.
 
 StringBuilder Metodları
-java
 
-Kopyala
 StringBuilder sb = new StringBuilder("Merhaba");
 
-sb.append(" Dünya");       // Sonuna ekle
-sb.insert(7, " Güzel");   // Belirli indekse ekle
-sb.replace(0, 7, "Selam"); // Aralığı değiştir
-sb.delete(5, 11);          // Aralığı sil
-sb.reverse();              // Ters çevir
+sb.append(" Dünya");        // Sonuna ekle
+sb.insert(7, " Güzel");     // Belirli indekse ekle
+sb.replace(0, 7, "Selam");  // Aralığı değiştir
+sb.delete(5, 11);           // Aralığı sil
+sb.reverse();               // Ters çevir
 
 System.out.println(sb.toString());
-java
 
-Kopyala
+
 // Zincirleme (method chaining) kullanımı
 String sonuc = new StringBuilder()
     .append("Ad: ")
@@ -320,6 +317,8 @@ String sonuc = new StringBuilder()
     .toString();
 
 System.out.println(sonuc); // "Ad: Ali, Yaş: 25"
+
+
 StringBuilder vs StringBuffer
 İkisi neredeyse aynı. Tek fark:
 
