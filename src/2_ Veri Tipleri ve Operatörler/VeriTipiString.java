@@ -217,7 +217,7 @@ int yas = 25;
 double not_ = 3.75;
 
 String mesaj = String.format("Ad: %s, Yaş: %d, Not: %.2f", ad, yas, not_);
-System.out.println(mesaj); // Ad: Ahmet, Yaş: 25, Not: 3.75
+System.out.println(mesaj); // "Ad: Ahmet, Yaş: 25, Not: 3.75"
 
 Format	Açıklama	        Örnek
 %s	    String	            "Ahmet"
@@ -240,6 +240,35 @@ String html = """
     """.formatted(ad);
 
 System.out.println(html);
+
+
+---
+String Birleştirme (Concatenation)
++ Operatörü
+
+String ad = "Ali";
+String soyad = "Demir";
+String tamAd = ad + " " + soyad;
+System.out.println(tamAd); // "Ali Demir"
+
+Bir String ile başka bir tip birleştirildiğinde, diğer tip otomatik String'e çevrilir:
+
+
+int yas = 30;
+String mesaj = "Yaş: " + yas; // "Yaş: 30"
+
+System.out.println("Sonuç: " + (10 + 20)); // "Sonuç: 30"
+System.out.println("Sonuç: " + 10 + 20);   // "Sonuç: 1020" — Dikkat!
+
+Son satırda soldan sağa işleniyor: önce "Sonuç: " + 10 → "Sonuç: 10", sonra "Sonuç: 10" + 20 → "Sonuç: 1020". Parantez kullanarak bu tuzaktan kaçın.
+
+
+concat() Metodu
+ 
+String s = "Merhaba".concat(" ").concat("Dünya");
+System.out.println(s); // "Merhaba Dünya"
+
+Pratikte + operatörü daha okunabilir, concat() nadiren kullanılır.
 
 
 */
