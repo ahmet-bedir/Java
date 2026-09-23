@@ -229,6 +229,8 @@ Format	Açıklama	        Örnek
 
 Java 15+ ile text block ve formatted() metodu:
 
+String ad = "Ali";
+
 String html = """
     <html>
         <body>
@@ -236,4 +238,8 @@ String html = """
         </body>
     </html>
     """.formatted(ad);
+
+System.out.println(html);
+
+
 */
