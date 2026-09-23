@@ -260,7 +260,7 @@ String mesaj = "Yaş: " + yas; // "Yaş: 30"
 System.out.println("Sonuç: " + (10 + 20)); // "Sonuç: 30"
 System.out.println("Sonuç: " + 10 + 20);   // "Sonuç: 1020" — Dikkat!
 
-Son satırda soldan sağa işleniyor: önce "Sonuç: " + 10 → "Sonuç: 10", sonra "Sonuç: 10" + 20 → "Sonuç: 1020". Parantez kullanarak bu tuzaktan kaçın.
+Son satırda soldan sağa işleniyor: önce "Sonuç: " + 10 → "Sonuç: 10", sonra "Sonuç: 10" + 20 → "Sonuç: 1020". Aritmetik işlemlerde parantez kullan.
 
 
 concat() Metodu
@@ -270,5 +270,67 @@ System.out.println(s); // "Merhaba Dünya"
 
 Pratikte + operatörü daha okunabilir, concat() nadiren kullanılır.
 
+
+---
+StringBuilder — Performanslı String Birleştirme
+String immutable olduğu için döngüde string birleştirmek çok verimsiz. Her + işlemi yeni bir nesne oluşturur.
+
+ 
+// KÖTÜ — her adımda yeni String nesnesi
+String sonuc = "";
+for (int i = 0; i < 10000; i++) {
+    sonuc += i + ", "; // 10000 yeni String nesnesi!
+}
+
+Bunu şöyle düşün: Her satırda 10.000 kere yeni bir kağıt alıp tüm yazıyı baştan yazıyorsun.
+
+StringBuilder bunu çözer:
+
+// İYİ — tek nesne üzerinde çalışır
+StringBuilder sb = new StringBuilder();
+for (int i = 0; i < 10000; i++) {
+    sb.append(i).append(", ");
+}
+String sonuc = sb.toString();
+
+StringBuilder mutable (değiştirilebilir) bir karakter dizisi tutar. append() çağırdığında mevcut diziyi genişletir, yeni nesne oluşturmaz.
+
+StringBuilder Metodları
+java
+
+Kopyala
+StringBuilder sb = new StringBuilder("Merhaba");
+
+sb.append(" Dünya");       // Sonuna ekle
+sb.insert(7, " Güzel");   // Belirli indekse ekle
+sb.replace(0, 7, "Selam"); // Aralığı değiştir
+sb.delete(5, 11);          // Aralığı sil
+sb.reverse();              // Ters çevir
+
+System.out.println(sb.toString());
+java
+
+Kopyala
+// Zincirleme (method chaining) kullanımı
+String sonuc = new StringBuilder()
+    .append("Ad: ")
+    .append("Ali")
+    .append(", Yaş: ")
+    .append(25)
+    .toString();
+
+System.out.println(sonuc); // "Ad: Ali, Yaş: 25"
+StringBuilder vs StringBuffer
+İkisi neredeyse aynı. Tek fark:
+
+StringBuilder: Thread-safe değil, daha hızlı. Bunu kullan.
+
+StringBuffer: Thread-safe (synchronized), daha yavaş.
+
+Çoğu durumda StringBuilder yeterli. Çoklu thread ortamında çalışıyorsan ve aynı buffer'a farklı thread'ler yazıyorsa StringBuffer kullan — ama bu çok nadir bir senaryo.
+
+
+---
+String Karşılaştırma
 
 */
