@@ -1,15 +1,8 @@
 public class VeriTipiString {
     public static void main(String[] args) {
-        String isim = "ahmet"
-        // Doğru yol
-        if (isim.equals("Ahmet")) {
-            System.out.println("Hoş geldin Ahmet!");
-        }
+        
 
-        // Daha güvenli yol — NullPointerException'dan korunur
-        if ("Ahmet".equals(isim)) {
-            System.out.println("Hoş geldin Ahmet!");
-        }
+
     }
 }
 /*
@@ -80,7 +73,7 @@ System.out.println(s1 == s2);      // true (ikisi de pool'da)
 System.out.println(s1 == s3);      // false (s3 heap'te)
 System.out.println(s1.equals(s3)); // true (içerik aynı)
 
-⚠️ Kural: String karşılaştırmasında her zaman `equals()` kullan. `==` sadece pool'daki literal'ler arasında doğru çalışır — bu güvenilir değil.
+⚠️ Kural: String karşılaştırmasında her zaman `equals()` kullan. `==` sadece pool'daki literal'ler arasında doğru çalışır — bu igüvenilir değil.
 
 
 // Doğru yol
@@ -103,9 +96,9 @@ String girdi = "java";
 System.out.println(girdi.equals("Java"));            // false
 System.out.println(girdi.equalsIgnoreCase("Java"));  // true
 
-Kullanıcı girdisi alırken çok işe yarar. Kullanıcı "JAVA", "Java" veya "java" yazabilir — hepsini yakala.
+Kullanıcı girdisi alırken kullanışlıdır. Kullanıcı "JAVA", "Java" veya "java" yazabilir — hepsini değerlendirir.
 
----
+------
 Sık Kullanılan String Metotları
 
 ---
