@@ -1,13 +1,20 @@
 public class VeriTipiString {
     public static void main(String[] args) {
         
-String s = "Java programlama dili";
+  String csv = "Ali,Veli,Ayşe,Fatma";
+String[] isimler = csv.split(",");
 
-System.out.println(s.indexOf("prograM"));  // 5
-System.out.println(s.indexOf("Python"));   // -1 (bulunamadı)
-System.out.println(s.indexOf("java"));   // -1 (bulunamadıbüyük/küçük harf duyarlı)    
-System.out.println(s.contains("Java"));    // true
-System.out.println(s.contains("java"));    // false (büyük/küçük harf duyarlı)
+for (String isim : isimler) {
+    System.out.println(isim);
+}
+// System.out.println(isimler.length());
+
+
+String metin = "Merhaba   Dünya";
+String[] kelimeler = metin.split("\\s+"); // Bir veya daha fazla boşluk
+
+System.out.println(kelimeler.length); // 2
+
 
     }
 }
@@ -147,6 +154,8 @@ String s = "Java programlama dili";
 
 System.out.println(s.indexOf("program"));  // 5
 System.out.println(s.indexOf("Python"));   // -1 (bulunamadı)
+System.out.println(s.indexOf("java"));     // -1 (bulunamadı - büyük/küçük harf duyarlı)
+System.out.println(s.indexOf("Javac"));    // -1 (bulunamadı)
 System.out.println(s.contains("Java"));    // true
 System.out.println(s.contains("java"));    // false (büyük/küçük harf duyarlı)
 
@@ -170,7 +179,7 @@ String[] kelimeler = metin.split("\\s+"); // Bir veya daha fazla boşluk
 
 System.out.println(kelimeler.length); // 2
 
-split() parametre olarak regex alır. Bu yüzden nokta ile bölmek istersen "\\." yazmalısın — çünkü regex'te . "herhangi bir karakter" demek.
+split() parametre olarak regex'de alır. Bu yüzden nokta ile bölmek istersen "\\." yazmalısın — çünkü regex'te . "herhangi bir karakter" demek.
 
 ---
 trim() ve strip() — Boşluk Temizleme
