@@ -1,10 +1,15 @@
 public class VeriTipiString {
     public static void main(String[] args) {
-        String c = new String("Merhaba");
-        String d = new String("Merhaba");
+        String isim = "ahmet"
+        // Doğru yol
+        if (isim.equals("Ahmet")) {
+            System.out.println("Hoş geldin Ahmet!");
+        }
 
-        System.out.println(c == d);      // false — farklı nesneler!
-        System.out.println(c.equals(d)); // true — içerik aynı
+        // Daha güvenli yol — NullPointerException'dan korunur
+        if ("Ahmet".equals(isim)) {
+            System.out.println("Hoş geldin Ahmet!");
+        }
     }
 }
 /*
@@ -60,7 +65,7 @@ new her zaman heap'te yeni bir nesne oluşturur, pool'u kullanmaz.
 
 ---
 `equals()` vs `==`
-İki String'in içeriğini karşılaştırmak istiyorsan `equals()` kullan, == değil.
+İki String'in içeriğini karşılaştırmak istiyorsan `equals()` kullan, `==` değil.
 
 == : İki referansın aynı nesneyi gösterip göstermediğini kontrol eder
 
@@ -75,7 +80,7 @@ System.out.println(s1 == s2);      // true (ikisi de pool'da)
 System.out.println(s1 == s3);      // false (s3 heap'te)
 System.out.println(s1.equals(s3)); // true (içerik aynı)
 
-⚠️ Altın Kural: String karşılaştırmasında her zaman `equals()` kullan. == sadece pool'daki literal'ler arasında doğru çalışır — bu güvenilir değil.
+⚠️ Kural: String karşılaştırmasında her zaman `equals()` kullan. `==` sadece pool'daki literal'ler arasında doğru çalışır — bu güvenilir değil.
 
 
 // Doğru yol
