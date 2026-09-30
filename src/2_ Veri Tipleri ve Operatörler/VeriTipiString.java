@@ -1,19 +1,6 @@
 public class VeriTipiString {
     public static void main(String[] args) {
-        
-  String csv = "Ali,Veli,Ayşe,Fatma";
-String[] isimler = csv.split(",");
-
-for (String isim : isimler) {
-    System.out.println(isim);
-}
-// System.out.println(isimler.length());
-
-
-String metin = "Merhaba   Dünya";
-String[] kelimeler = metin.split("\\s+"); // Bir veya daha fazla boşluk
-
-System.out.println(kelimeler.length); // 2
+    System.out.println("sığır".toUpperCase());
 
 
     }
