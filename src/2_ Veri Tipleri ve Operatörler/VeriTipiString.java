@@ -1,7 +1,13 @@
 public class VeriTipiString {
     public static void main(String[] args) {
         
+String s = "Java programlama dili";
 
+System.out.println(s.indexOf("prograM"));  // 5
+System.out.println(s.indexOf("Python"));   // -1 (bulunamadı)
+System.out.println(s.indexOf("java"));   // -1 (bulunamadıbüyük/küçük harf duyarlı)    
+System.out.println(s.contains("Java"));    // true
+System.out.println(s.contains("java"));    // false (büyük/küçük harf duyarlı)
 
     }
 }
@@ -73,7 +79,7 @@ System.out.println(s1 == s2);      // true (ikisi de pool'da)
 System.out.println(s1 == s3);      // false (s3 heap'te)
 System.out.println(s1.equals(s3)); // true (içerik aynı)
 
-⚠️ Kural: String karşılaştırmasında her zaman `equals()` kullan. `==` sadece pool'daki literal'ler arasında doğru çalışır — bu igüvenilir değil.
+⚠️ Kural: String karşılaştırmasında her zaman `equals()` kullan. `==` sadece pool'daki literal'ler arasında doğru çalışır — bu işlem güvenilir değildir.
 
 
 // Doğru yol
