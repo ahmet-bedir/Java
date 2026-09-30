@@ -1,8 +1,12 @@
 public class VeriTipiString {
     public static void main(String[] args) {
-    System.out.println("sığır".toUpperCase());
+    
+        String ad = "Ahmet";
+        int yas = 25;
+        double not_ = 3.75;
 
-
+        String mesaj = String.format("Ad: %s, Yaş: %d, Not: %.2f", ad, yas, not_);
+        System.out.println(mesaj); // "Ad: Ahmet, Yaş: 25, Not: 3.75"
     }
 }
 /*
