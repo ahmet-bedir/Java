@@ -1,5 +1,13 @@
 public class VeriTipiString {
     public static void main(String[] args) {
+        String a = "Merhaba";
+        String b = "Merhaba";
+
+        System.out.println(a == b); // true — aynı nesne!
+        System.out.println(a.equals(b)); // true — içerik aynı
+        
+        System.out.println("-------");
+        
         String c = new String("Merhaba");
         String d = new String("Merhaba");
 
