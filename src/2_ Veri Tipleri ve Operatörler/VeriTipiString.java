@@ -329,8 +329,6 @@ StringBuilder vs StringBuffer
 
 - StringBuffer: Thread-safe (synchronized), daha yavaş.
 
-Çoğu durumda StringBuilder yeterli. Çoklu thread ortamında çalışıyorsan ve aynı buffer'a farklı thread'ler yazıyorsa StringBuffer kullnmalısın.
-
 
 ---
 String Karşılaştırma
