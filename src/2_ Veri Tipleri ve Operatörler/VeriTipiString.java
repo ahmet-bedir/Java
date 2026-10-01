@@ -334,5 +334,19 @@ StringBuffer: Thread-safe (synchronized), daha yavaş.
 
 ---
 String Karşılaştırma
+Yöntem	Ne yapar	Ne zaman kullan
+==	Referans karşılaştırma	Kullanma (String için)
+equals()	İçerik karşılaştırma	Her zaman
+equalsIgnoreCase()	Büyük/küçük harf yok sayarak	Kullanıcı girdisi
+compareTo()	Alfabetik sıralama	Sıralama işlemleri
 
+String a = "elma";
+String b = "armut";
+
+int sonuc = a.compareTo(b);
+// sonuc > 0 → a, b'den sonra gelir (alfabetik)
+// sonuc < 0 → a, b'den önce gelir
+// sonuc == 0 → eşitler
+
+System.out.println("elma".compareTo("armut")); // pozitif (e > a)
 */
