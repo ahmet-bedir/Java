@@ -1,18 +1,11 @@
 public class VeriTipiString {
     public static void main(String[] args) {
-        String a = "Merhaba";
-        String b = "Merhaba";
-
-        System.out.println(a == b); // true — aynı nesne!
-        System.out.println(a.equals(b)); // true — içerik aynı
+        String ad = "Ahmet";
+        int yas = 25;
+        double not_ = 3.75;
         
-        System.out.println("-------");
-        
-        String c = new String("Merhaba");
-        String d = new String("Merhaba");
-
-        System.out.println(c == d);      // false — farklı nesneler!
-        System.out.println(c.equals(d)); // true — içerik aynı
+        String mesaj = String.format("Ad: %s, Yaş: %d, Not: %.2f", ad, yas, not_);
+        System.out.println(mesaj); // "Ad: Ahmet, Yaş: 25, Not: 3.75"
     }
 }
 /*
@@ -68,7 +61,7 @@ new her zaman heap'te yeni bir nesne oluşturur, pool'u kullanmaz.
 
 ---
 `equals()` vs `==`
-İki String'in içeriğini karşılaştırmak istiyorsan `equals()` kullan, == değil.
+İki String'in içeriğini karşılaştırmak istiyorsan `equals()` kullan, `==` değil.
 
 == : İki referansın aynı nesneyi gösterip göstermediğini kontrol eder
 
@@ -83,7 +76,7 @@ System.out.println(s1 == s2);      // true (ikisi de pool'da)
 System.out.println(s1 == s3);      // false (s3 heap'te)
 System.out.println(s1.equals(s3)); // true (içerik aynı)
 
-⚠️ Altın Kural: String karşılaştırmasında her zaman `equals()` kullan. == sadece pool'daki literal'ler arasında doğru çalışır — bu güvenilir değil.
+⚠️ Kural: String karşılaştırmasında her zaman `equals()` kullan. `==` sadece pool'daki literal'ler arasında doğru çalışır — bu işlem güvenilir değildir.
 
 
 // Doğru yol
@@ -106,9 +99,9 @@ String girdi = "java";
 System.out.println(girdi.equals("Java"));            // false
 System.out.println(girdi.equalsIgnoreCase("Java"));  // true
 
-Kullanıcı girdisi alırken çok işe yarar. Kullanıcı "JAVA", "Java" veya "java" yazabilir — hepsini yakala.
+Kullanıcı girdisi alırken kullanışlıdır. Kullanıcı "JAVA", "Java" veya "java" yazabilir — hepsini değerlendirir.
 
----
+------
 Sık Kullanılan String Metotları
 
 ---
@@ -151,6 +144,8 @@ String s = "Java programlama dili";
 
 System.out.println(s.indexOf("program"));  // 5
 System.out.println(s.indexOf("Python"));   // -1 (bulunamadı)
+System.out.println(s.indexOf("java"));     // -1 (bulunamadı - büyük/küçük harf duyarlı)
+System.out.println(s.indexOf("Javac"));    // -1 (bulunamadı)
 System.out.println(s.contains("Java"));    // true
 System.out.println(s.contains("java"));    // false (büyük/küçük harf duyarlı)
 
@@ -174,7 +169,7 @@ String[] kelimeler = metin.split("\\s+"); // Bir veya daha fazla boşluk
 
 System.out.println(kelimeler.length); // 2
 
-split() parametre olarak regex alır. Bu yüzden nokta ile bölmek istersen "\\." yazmalısın — çünkü regex'te . "herhangi bir karakter" demek.
+split() parametre olarak regex'de alır. Bu yüzden nokta ile bölmek istersen "\\." yazmalısın — çünkü regex'te . "herhangi bir karakter" demek.
 
 ---
 trim() ve strip() — Boşluk Temizleme
