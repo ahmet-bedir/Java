@@ -325,11 +325,11 @@ System.out.println(sonuc); // "Ad: Ali, Yaş: 25"
 StringBuilder vs StringBuffer
 İkisi neredeyse aynı. Tek fark:
 
-StringBuilder: Thread-safe değil, daha hızlı. Bunu kullan.
+- StringBuilder: Thread-safe değil, daha hızlı.
 
-StringBuffer: Thread-safe (synchronized), daha yavaş.
+- StringBuffer: Thread-safe (synchronized), daha yavaş.
 
-Çoğu durumda StringBuilder yeterli. Çoklu thread ortamında çalışıyorsan ve aynı buffer'a farklı thread'ler yazıyorsa StringBuffer kullan — ama bu çok nadir bir senaryo.
+Çoğu durumda StringBuilder yeterli. Çoklu thread ortamında çalışıyorsan ve aynı buffer'a farklı thread'ler yazıyorsa StringBuffer kullnmalısın.
 
 
 ---
@@ -349,4 +349,25 @@ int sonuc = a.compareTo(b);
 // sonuc == 0 → eşitler
 
 System.out.println("elma".compareTo("armut")); // pozitif (e > a)
+
+
+---
+Null ve Empty Kontrolü
+
+String s = null;
+String bos = "";
+String bosluk = "   ";
+
+// Null kontrolü
+if (s != null && !s.isEmpty()) {
+    // güvenli kullanım
+}
+
+// Java 11+ ile isBlank()
+System.out.println("".isEmpty());     // true
+System.out.println("".isBlank());     // true
+System.out.println("   ".isEmpty());  // false
+System.out.println("   ".isBlank()); // true (sadece boşluk)
+
+isEmpty() uzunluğun 0 olup olmadığını kontrol eder. isBlank() (Java 11+) sadece boşluk karakterleri içerip içermediğini kontrol eder.
 */
