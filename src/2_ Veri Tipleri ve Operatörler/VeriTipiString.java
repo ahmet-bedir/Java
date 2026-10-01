@@ -12,7 +12,7 @@ public class VeriTipiString {
 String Nedir?
 String, karakter dizisi tutan bir sınıftır (class). Primitive tip değildir — bir nesnedir. Ama Java onu o kadar özel tutar ki, neredeyse primitive gibi kullanırsın.
 
-String isim = "Ahmet";           // Literal ile oluşturma
+String isim = "Ahmet";                 // Literal ile oluşturma
 String soyisim = new String("Yılmaz"); // new ile oluşturma (önerilmez)
 
 Çift tırnak arasına yazdığın her şey bir String literal'dir. Java bunu arka planda bir String nesnesi olarak oluşturur.
