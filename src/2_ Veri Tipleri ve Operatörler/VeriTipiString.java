@@ -369,5 +369,10 @@ System.out.println("".isBlank());     // true
 System.out.println("   ".isEmpty());  // false
 System.out.println("   ".isBlank()); // true (sadece boşluk)
 
-isEmpty() uzunluğun 0 olup olmadığını kontrol eder. isBlank() (Java 11+) sadece boşluk karakterleri içerip içermediğini kontrol eder.
+isEmpty() uzunluğun 0 olup olmadığını kontrol eder.
+isBlank() (Java 11+) sadece boşluk karakterleri içerip içermediğini kontrol eder.
+
+💡 Öneri: null kontrolünü her zaman önce yap. s.isEmpty() çağrısı s null ise NullPointerException fırlatır.
+
+
 */
