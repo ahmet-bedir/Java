@@ -332,11 +332,13 @@ StringBuilder vs StringBuffer
 
 ---
 String Karşılaştırma
-Yöntem	Ne yapar	Ne zaman kullan
-==	Referans karşılaştırma	Kullanma (String için)
-equals()	İçerik karşılaştırma	Her zaman
+
+Yöntem	            Ne yapar	                    Ne zaman kullan
+==	                Referans karşılaştırma	        Kullanma (String için)
+equals()	        İçerik karşılaştırma	        Her zaman
 equalsIgnoreCase()	Büyük/küçük harf yok sayarak	Kullanıcı girdisi
-compareTo()	Alfabetik sıralama	Sıralama işlemleri
+compareTo()	        Alfabetik sıralama	            Sıralama işlemleri
+
 
 String a = "elma";
 String b = "armut";
