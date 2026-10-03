@@ -375,4 +375,24 @@ isBlank() (Java 11+) sadece boşluk karakterleri içerip içermediğini kontrol 
 💡 Öneri: null kontrolünü her zaman önce yap. s.isEmpty() çağrısı s null ise NullPointerException fırlatır.
 
 
+---
+Java 13+: Text Blocks (Çok Satırlı String)
+
+// Eski yol
+String json = "{\n" +
+    "  \"ad\": \"Ali\",\n" +
+    "  \"yas\": 25\n" +
+    "}";
+
+// Text block (Java 13+)
+String jsonYeni = """
+    {
+      "ad": "Ali",
+      "yas": 25
+    }
+    """;
+
+System.out.println(jsonYeni);
+
+Text block'lar üç çift tırnakla (""") başlar ve biter. Escape karakterlerine gerek kalmaz, çok satırlı metinleri çok daha okunabilir yapar.
 */
