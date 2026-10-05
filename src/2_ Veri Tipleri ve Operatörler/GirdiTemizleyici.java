@@ -23,11 +23,9 @@ public class GirdiTemizleyici {
             .strip().replaceAll("\\s+", " ").trim();
         System.out.println("Son Hali\n[" + temiz2 + "]");
         
-        if(girdi2 == null){
-            System.out.println("null");
-        }
-        if(girdi2.isEmpty()){
+        if (girdi2 != null && !girdi2.isEmpty()) {
             System.out.println("boşluk");
         }
+            
     }
 }
