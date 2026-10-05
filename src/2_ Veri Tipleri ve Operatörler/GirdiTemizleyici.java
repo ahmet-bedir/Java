@@ -1,18 +1,30 @@
+import java.util.Scanner;
+
 public class GirdiTemizleyici {
-    public static String temizle(String girdi) {
-        if (girdi == null) {
-            return "";
-        }
+    public static void main(String[] args) {
+        String girdi = "   Java    Programlama   ";
+        System.out.println("=== Değişken Kullanarak ===");
+        System.out.println("İlk Hali\n[" + girdi + "]\n");
         
-        return girdi
+        String temiz = girdi
             .strip()                    // Baş/son boşluk
             .replaceAll("\\s+", " ")    // Çoklu boşluk → tek boşluk
             .trim();
-    }
-    
-    public static void main(String[] args) {
-        String kirli = "   Merhaba    Dünya   ";
-        String temiz = temizle(kirli);
-        System.out.println("[" + temiz + "]"); // [Merhaba Dünya]
+        System.out.println("Son Hali\n[" + temiz + "]"); // [Java Programlama]
+        
+        
+        System.out.println("\n\n=== Kullanıcı Girişi ===");
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Giriş: ");
+        String girdi2 = scanner.nextLine();
+        System.out.println("İlk Hali\n[" + girdi2 + "]\n");
+        
+        String temiz2 = girdi2
+            .strip().replaceAll("\\s+", " ").trim();
+        System.out.println("Son Hali\n[" + temiz2 + "]");
+        
+        if(girdi2.equals(" ")){
+            System.out.println("bos");
+        }
     }
 }
