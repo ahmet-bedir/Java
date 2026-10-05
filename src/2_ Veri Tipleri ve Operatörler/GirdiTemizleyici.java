@@ -17,15 +17,15 @@ public class GirdiTemizleyici {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Giriş: ");
         String girdi2 = scanner.nextLine();
-        System.out.println("İlk Hali\n[" + girdi2 + "]\n");
+        System.out.println("İlk Hali\n[" + girdi2 + "]");
+        if (girdi2.isBlank()) {
+            System.out.println("Sadece Boşluk!\n");
+        }
         
         String temiz2 = girdi2
             .strip().replaceAll("\\s+", " ").trim();
         System.out.println("Son Hali\n[" + temiz2 + "]");
         
-        if (girdi2.isEmpty()) {
-            System.out.println("boşluk");
-        }
-            
+        scanner.close();         
     }
 }
