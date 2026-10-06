@@ -17,7 +17,7 @@ public class GirdiTemizleyici {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Giriş: ");
         String girdi2 = scanner.nextLine();
-        System.out.println("İlk Hali\n[" + girdi2 + "]");
+        System.out.println("İlk Hali\n[" + girdi2 + "]\n");
         if (girdi2.isBlank()) {
             System.out.println("Sadece Boşluk!\n");
         }
