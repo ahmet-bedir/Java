@@ -395,4 +395,9 @@ String jsonYeni = """
 System.out.println(jsonYeni);
 
 Text block'lar üç çift tırnakla (""") başlar ve biter. Escape karakterlerine gerek kalmaz, çok satırlı metinleri çok daha okunabilir yapar.
+
+---
+String.join() — Birleştirme
+
+
 */
