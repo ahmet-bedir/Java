@@ -399,5 +399,22 @@ Text block'lar üç çift tırnakla (""") başlar ve biter. Escape karakterlerin
 ---
 String.join() — Birleştirme
 
+public class Java {
+    public static void main(String[] args) {
+        String[] kelimeler = {"Java", "çok", "güzel"};
+        String cumle = String.join(" ", kelimeler);
+        System.out.println(cumle); // "Java çok güzel"
+
+        // Virgülle birleştirme
+        String csv = String.join(",", "Ali", "Veli", "Ayşe");
+        System.out.println(csv); // "Ali,Veli,Ayşe"
+
+        // List ile de çalışır
+        List<String> isimler = List.of("Java", "Python", "Go");
+        String diller = String.join(", ", isimler);
+        System.out.println(diller); // "Java, Python, Go"
+    }
+}
+
 
 */
