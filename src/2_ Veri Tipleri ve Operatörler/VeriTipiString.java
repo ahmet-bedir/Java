@@ -417,4 +417,27 @@ public class Java {
 }
 
 
+---
+String repeat() ve diğer Java 11+ Metotları
+
+
+// repeat() — Java 11+
+String cizgi = "-".repeat(30);
+System.out.println(cizgi); // "------------------------------"
+
+String tab = "  ".repeat(3);
+System.out.println(tab + "Girintili metin");
+
+// isBlank() — Java 11+
+System.out.println("".isBlank());      // true
+System.out.println("   ".isBlank());   // true
+System.out.println(" a ".isBlank());   // false
+
+// lines() — Java 11+ (satırlara böler)
+String metin = "Satır 1\nSatır 2\nSatır 3";
+metin.lines().forEach(System.out::println);
+
+// indent() — Java 12+
+String kod = "if (true) {\n    ok();\n}";
+System.out.println(kod.indent(4)); // Her satıra 4 boşluk ekler
 */
