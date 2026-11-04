@@ -34,3 +34,5 @@ Karakter	Anlamı
 
 Text block """ ile başlar ve """ ile biter. İçinde \n ve \" kullanmana gerek kalmaz.
 */
+
+
