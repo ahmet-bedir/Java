@@ -29,3 +29,5 @@ public class Java {
         System.out.println("\nCümle sayısı: " + cumleler.length);
     }
 }
+
+
