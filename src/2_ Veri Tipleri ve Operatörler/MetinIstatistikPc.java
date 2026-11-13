@@ -39,6 +39,17 @@ public class MetinIstatistikPc {
         }
         
         System.out.println("\nEn uzun kelime: " + enUzun);
+        
+        
+        // En kısa kelime
+        String enKisa = "";
+        for (String kelime : kelimeler) {
+            if (kelime.length() < enKisa.length()) {
+                enKisa = kelime;
+            }
+        }
+        
+        System.out.println("En kısa kelime: " + enKisa);
     }
 }
 
