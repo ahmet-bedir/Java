@@ -1,16 +1,17 @@
-public class Java {
+public class MetinIstatistikPc {
     public static void main(String[] args) {
         
         String metin = "Java programlama dili. Java programlama dili? Java programlama dili!" + "Java programlama dili.";
             
         System.out.println(metin);
         
+        
         // Kelime sayısı
         System.out.println("\n=== Kelimeler ===");
         
         String[] kelimeler = metin.split("\\s+");
         
-        for(String kelime : kelimeler){
+        for (String kelime : kelimeler){
             System.out.println(kelime);
         }
         
@@ -22,11 +23,22 @@ public class Java {
         
         System.out.println("\n=== Cümleler ===");
         
-        for(String cumle : cumleler){
+        for (String cumle : cumleler){
             System.out.println(cumle);
         }
         
         System.out.println("\nCümle sayısı: " + cumleler.length);
+        
+        
+        // En uzun kelime
+        String enUzun = "";
+        for (String kelime : kelimeler) {
+            if (kelime.length() > enUzun.length()) {
+                enUzun = kelime;
+            }
+        }
+        
+        System.out.println("\nEn uzun kelime: " + enUzun);
     }
 }
 
