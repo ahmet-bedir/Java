@@ -44,12 +44,13 @@ public class MetinIstatistikPc {
         // En kısa kelime
         String enKisa = "";
         for (String kelime : kelimeler) {
-            if (metin.length() < enKisa.length()) {
+            if (enKisa.length() > kelime.length()) {
                 enKisa = kelime;
             }
         }
         
         System.out.println("En kısa kelime: " + enKisa);
+        
     }
 }
 
