@@ -41,8 +41,8 @@ public class MetinIstatistikPc {
         System.out.println("\nEn uzun kelime: " + enUzun);
         
         
-        // En kısa kelime
-        String enKisa = "";
+        // En kısa kelime copilot devreye gir
+        String enKisa = kelimeler[0];
         for (String kelime : kelimeler) {
             if (enKisa.length() > kelime.length()) {
                 enKisa = kelime;
