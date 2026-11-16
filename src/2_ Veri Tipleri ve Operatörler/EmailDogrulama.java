@@ -25,9 +25,9 @@ public class EmailDogrulama {
     
     public static void main(String[] args) {
         System.out.println("ali@example.com => " + gecerliMi("ali@example.com"));  // true
-        System.out.println(gecerliMi("ali@example"));       // false
-        System.out.println(gecerliMi("@example.com"));      // false
-        System.out.println(gecerliMi("ali@@example.com"));  // false
-        System.out.println(gecerliMi(null));                 // false
+        System.out.println("ali@example => " + gecerliMi("ali@example"));       // false
+        System.out.println("@example.com => " + gecerliMi("@example.com"));      // false
+        System.out.println("ali@@example.com => " + gecerliMi("ali@@example.com"));  // false
+        System.out.println("null => " + gecerliMi(null));                 // false
     }
 }
