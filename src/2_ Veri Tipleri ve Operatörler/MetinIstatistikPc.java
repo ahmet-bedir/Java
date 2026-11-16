@@ -1,7 +1,7 @@
 public class MetinIstatistikPc {
     public static void main(String[] args) {
         
-        String metin = "Java programlama dili. Java programlama dili? Java programlama dili!" + "Java programlama dili.";
+        String metin = "Java bir programlama dilidir. Java programlama dili? Java programlama dili!" + "Java programlama dili.";
             
         System.out.println(metin);
         
@@ -44,7 +44,7 @@ public class MetinIstatistikPc {
         // En kısa kelime
         String enKisa = kelimeler[0];
         for (String kelime : kelimeler) {
-            if (enKisa.length() > kelime.length()) {
+            if (kelime.length() < enKisa.length()) {
                 enKisa = kelime;
             }
         }
