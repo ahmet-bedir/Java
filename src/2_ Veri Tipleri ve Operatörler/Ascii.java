@@ -5,10 +5,10 @@ public class Ascii {
         // }
 
         char a = 'A';
-        System.out.println((int) a); // 65
+        System.out.println(a + ": " + (int) a); // 65
 
         char sifir = '0';
-        System.out.println((int) sifir); // 48
+        System.out.println(sifir + ": " + (int) sifir); // 48
 
         // Karakter aritmetiği
         char b = (char) ('A' + 1);
