@@ -12,6 +12,6 @@ public class Ascii {
 
         // Karakter aritmetiği
         char b = (char) ('A' + 1);
-        System.out.println(b); // 'B'
+        System.out.println("A + 1 = " + b ); // 'B'
     }
 }
