@@ -15,11 +15,11 @@ public class Ascii {
         System.out.println(b); // 'B'char a = 'A';
         System.out.println((int) a); // 65
 
-        char sifir = '0';
-        System.out.println((int) sifir_); // 48
+        sifir = '0';
+        System.out.println(sifir + ": " + (int) sifir); // 48
 
         // Karakter aritmetiği
-        char b = (char) ('A' + 1);
-        System.out.println(b_); // 'B'
+        charb = (char) ('A' + 1);
+        System.out.println(b); // 'B'
     }
 }
